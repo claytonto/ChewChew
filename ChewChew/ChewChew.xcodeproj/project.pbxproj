@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8831BAB2E890025FC18 /* AppDelegate.swift */; };
+		010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8851BAB2E890025FC18 /* ViewController.swift */; };
+		010EE8891BAB2E890025FC18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010EE8871BAB2E890025FC18 /* Main.storyboard */; };
+		010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88A1BAB2E890025FC18 /* Images.xcassets */; };
+		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
+		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
+		FB27136EF23E4981ADC7DE6F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0080FB9338D9F95503FF14DB /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		010EE8941BAB2E890025FC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 010EE8761BAB2E890025FC18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 010EE87D1BAB2E890025FC18;
+			remoteInfo = ChewChew;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0080FB9338D9F95503FF14DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		010EE87E1BAB2E890025FC18 /* ChewChew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChewChew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		010EE8821BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		010EE8831BAB2E890025FC18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		010EE8851BAB2E890025FC18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		010EE8881BAB2E890025FC18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		010EE88A1BAB2E890025FC18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		010EE88D1BAB2E890025FC18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		010EE8931BAB2E890025FC18 /* ChewChewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChewChewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		010EE8981BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
+		9B2042054268C210BF288498 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C1201C4EEF07045C63973600 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		010EE87B1BAB2E890025FC18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB27136EF23E4981ADC7DE6F /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		010EE8901BAB2E890025FC18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		010EE8751BAB2E890025FC18 = {
+			isa = PBXGroup;
+			children = (
+				010EE8801BAB2E890025FC18 /* ChewChew */,
+				010EE8961BAB2E890025FC18 /* ChewChewTests */,
+				010EE87F1BAB2E890025FC18 /* Products */,
+				5101C8D7181977E2EB433543 /* Pods */,
+				A6BFC7F47D0099FBC0E7CDF4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		010EE87F1BAB2E890025FC18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				010EE87E1BAB2E890025FC18 /* ChewChew.app */,
+				010EE8931BAB2E890025FC18 /* ChewChewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		010EE8801BAB2E890025FC18 /* ChewChew */ = {
+			isa = PBXGroup;
+			children = (
+				010EE8831BAB2E890025FC18 /* AppDelegate.swift */,
+				010EE8851BAB2E890025FC18 /* ViewController.swift */,
+				010EE8871BAB2E890025FC18 /* Main.storyboard */,
+				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
+				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
+				010EE8811BAB2E890025FC18 /* Supporting Files */,
+			);
+			path = ChewChew;
+			sourceTree = "<group>";
+		};
+		010EE8811BAB2E890025FC18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				010EE8821BAB2E890025FC18 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		010EE8961BAB2E890025FC18 /* ChewChewTests */ = {
+			isa = PBXGroup;
+			children = (
+				010EE8991BAB2E890025FC18 /* ChewChewTests.swift */,
+				010EE8971BAB2E890025FC18 /* Supporting Files */,
+			);
+			path = ChewChewTests;
+			sourceTree = "<group>";
+		};
+		010EE8971BAB2E890025FC18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				010EE8981BAB2E890025FC18 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5101C8D7181977E2EB433543 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B2042054268C210BF288498 /* Pods.debug.xcconfig */,
+				C1201C4EEF07045C63973600 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6BFC7F47D0099FBC0E7CDF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0080FB9338D9F95503FF14DB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		010EE87D1BAB2E890025FC18 /* ChewChew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010EE89D1BAB2E890025FC18 /* Build configuration list for PBXNativeTarget "ChewChew" */;
+			buildPhases = (
+				C5F6205C6F0ED3084F36D350 /* Check Pods Manifest.lock */,
+				010EE87A1BAB2E890025FC18 /* Sources */,
+				010EE87B1BAB2E890025FC18 /* Frameworks */,
+				010EE87C1BAB2E890025FC18 /* Resources */,
+				8192CA851E765C5A951E691F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChewChew;
+			productName = ChewChew;
+			productReference = 010EE87E1BAB2E890025FC18 /* ChewChew.app */;
+			productType = "com.apple.product-type.application";
+		};
+		010EE8921BAB2E890025FC18 /* ChewChewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010EE8A01BAB2E890025FC18 /* Build configuration list for PBXNativeTarget "ChewChewTests" */;
+			buildPhases = (
+				010EE88F1BAB2E890025FC18 /* Sources */,
+				010EE8901BAB2E890025FC18 /* Frameworks */,
+				010EE8911BAB2E890025FC18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				010EE8951BAB2E890025FC18 /* PBXTargetDependency */,
+			);
+			name = ChewChewTests;
+			productName = ChewChewTests;
+			productReference = 010EE8931BAB2E890025FC18 /* ChewChewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		010EE8761BAB2E890025FC18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = ChewChew;
+				TargetAttributes = {
+					010EE87D1BAB2E890025FC18 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					010EE8921BAB2E890025FC18 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 010EE87D1BAB2E890025FC18;
+					};
+				};
+			};
+			buildConfigurationList = 010EE8791BAB2E890025FC18 /* Build configuration list for PBXProject "ChewChew" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 010EE8751BAB2E890025FC18;
+			productRefGroup = 010EE87F1BAB2E890025FC18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				010EE87D1BAB2E890025FC18 /* ChewChew */,
+				010EE8921BAB2E890025FC18 /* ChewChewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		010EE87C1BAB2E890025FC18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010EE8891BAB2E890025FC18 /* Main.storyboard in Resources */,
+				010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */,
+				010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		010EE8911BAB2E890025FC18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8192CA851E765C5A951E691F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5F6205C6F0ED3084F36D350 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		010EE87A1BAB2E890025FC18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
+				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		010EE88F1BAB2E890025FC18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		010EE8951BAB2E890025FC18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 010EE87D1BAB2E890025FC18 /* ChewChew */;
+			targetProxy = 010EE8941BAB2E890025FC18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		010EE8871BAB2E890025FC18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010EE8881BAB2E890025FC18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010EE88D1BAB2E890025FC18 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		010EE89B1BAB2E890025FC18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		010EE89C1BAB2E890025FC18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		010EE89E1BAB2E890025FC18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B2042054268C210BF288498 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChewChew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		010EE89F1BAB2E890025FC18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1201C4EEF07045C63973600 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChewChew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		010EE8A11BAB2E890025FC18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChewChewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChewChew.app/ChewChew";
+			};
+			name = Debug;
+		};
+		010EE8A21BAB2E890025FC18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChewChewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChewChew.app/ChewChew";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		010EE8791BAB2E890025FC18 /* Build configuration list for PBXProject "ChewChew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010EE89B1BAB2E890025FC18 /* Debug */,
+				010EE89C1BAB2E890025FC18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		010EE89D1BAB2E890025FC18 /* Build configuration list for PBXNativeTarget "ChewChew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010EE89E1BAB2E890025FC18 /* Debug */,
+				010EE89F1BAB2E890025FC18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		010EE8A01BAB2E890025FC18 /* Build configuration list for PBXNativeTarget "ChewChewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010EE8A11BAB2E890025FC18 /* Debug */,
+				010EE8A21BAB2E890025FC18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 010EE8761BAB2E890025FC18 /* Project object */;
+}
