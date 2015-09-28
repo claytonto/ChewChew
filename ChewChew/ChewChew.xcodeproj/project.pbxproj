@@ -13,6 +13,7 @@
 		010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88A1BAB2E890025FC18 /* Images.xcassets */; };
 		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
 		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
+		31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FB27136EF23E4981ADC7DE6F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0080FB9338D9F95503FF14DB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		010EE8981BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
+		31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		9B2042054268C210BF288498 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C1201C4EEF07045C63973600 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				010EE8831BAB2E890025FC18 /* AppDelegate.swift */,
 				010EE8851BAB2E890025FC18 /* ViewController.swift */,
 				010EE8871BAB2E890025FC18 /* Main.storyboard */,
+				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
 				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
 				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
 				010EE8811BAB2E890025FC18 /* Supporting Files */,
@@ -276,6 +279,7 @@
 			files = (
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
+				31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
