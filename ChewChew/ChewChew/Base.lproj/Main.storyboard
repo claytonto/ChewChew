@@ -41,6 +41,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ThS-iO-hi3" kind="show" id="aqq-k7-dkU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmH-ck-R3M">
                                 <rect key="frame" x="174" y="308" width="8" height="21"/>
@@ -120,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="323" y="387"/>
         </scene>
-        <!--Locations View Controller-->
+        <!--Results-->
         <scene sceneID="oJC-aF-pK0">
             <objects>
                 <tableViewController id="QM0-2l-bpM" customClass="LocationsViewController" customModule="ChewChew" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,11 +162,18 @@
                             <outlet property="delegate" destination="QM0-2l-bpM" id="Y2o-Xp-SUb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EzF-yV-TH3"/>
+                    <navigationItem key="navigationItem" title="Results" id="Duv-Ca-Sg2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="B8Z-SL-v3k">
+                            <color key="tintColor" red="1" green="0.0" blue="0.092421955149999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="Y05-aK-gpB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ick-de-rL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="387"/>
+            <point key="canvasLocation" x="1733" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mG7-dM-U47">
@@ -181,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue6-WF-IKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="387"/>
+            <point key="canvasLocation" x="1041" y="387"/>
         </scene>
     </scenes>
 </document>

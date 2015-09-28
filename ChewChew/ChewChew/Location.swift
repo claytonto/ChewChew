@@ -16,6 +16,6 @@ struct Location {
     
     init(name: String, distance: String) {
         self.name = name
-        self.distance = distance
+        self.distance = distance + " miles"
     }
 }
