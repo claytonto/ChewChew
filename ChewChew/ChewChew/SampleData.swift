@@ -8,7 +8,7 @@
 
 import Foundation
 
-//Set up sample data
+// Set up sample data
 
 let locationsData = [
     Location(name:"Bua Thai", distance: "0.3"),

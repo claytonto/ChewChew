@@ -21,6 +21,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="43W-gX-aIj">
                                 <rect key="frame" x="194" y="304" width="205" height="31"/>
                                 <color key="tintColor" red="1" green="0.28683072334830395" blue="0.3120062124016455" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Ft-cB-Y6K"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-xF-H9K">
                                 <rect key="frame" x="199" y="265" width="67" height="20.5"/>
@@ -42,6 +45,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGq-0i-IdG"/>
                                     <segue destination="ThS-iO-hi3" kind="show" id="aqq-k7-dkU"/>
                                 </connections>
                             </button>
@@ -100,7 +104,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="qxL-PI-4wR" id="Bgk-HY-vxc"/>
+                        <outlet property="label" destination="X1t-aK-rd3" id="AS6-Bz-GF8"/>
+                        <outlet property="search" destination="xf7-63-Luh" id="OWf-pP-Y2g"/>
+                        <outlet property="slider" destination="43W-gX-aIj" id="eRQ-5P-MLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

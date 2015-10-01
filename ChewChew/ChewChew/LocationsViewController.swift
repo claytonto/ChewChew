@@ -10,6 +10,7 @@ import UIKit
 
 class LocationsViewController: UITableViewController {
     
+    // List of all location results (SAMPLE DATA)
     var locations:[Location] = locationsData
 
     override func viewDidLoad() {
@@ -34,9 +35,11 @@ class LocationsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Currently showing all possible location results (SAMPLE DATA)
         return locations.count
     }
 
+    // Show location information on corresponding cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
 
