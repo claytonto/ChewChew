@@ -6,4 +6,4 @@ pod 'GoogleMaps'
 use_frameworks!
 pod 'SwiftyJSON', '~> 2.3.0'
 
-pod 'Alamofire'
+pod 'Alamofire', '~> 2.0.2'

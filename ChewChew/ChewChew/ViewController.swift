@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -46,6 +47,11 @@ class ViewController: UIViewController {
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let searchUrl: NSURL = NSURL(string: urlString as String)!
         print(searchUrl)
+        
+        Alamofire.request(.GET, searchUrl).responseJSON() {
+            (_, _, JSON) in
+            print(JSON.value)
+        }
     }
     
     // GETTER FUNCTIONS //

@@ -4,7 +4,7 @@ PODS:
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 2.0.2)
   - GoogleMaps
   - SwiftyJSON (~> 2.3.0)
 
