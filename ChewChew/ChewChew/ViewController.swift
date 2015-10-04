@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var trainStation: String = ""
-    var distanceRadius: Double = 0.0;
+    var distanceRadius: Double = 1.5;
     
     @IBOutlet weak var button: UIButton!
     
@@ -33,9 +33,19 @@ class ViewController: UIViewController {
     @IBAction func searchPressed(sender: UIButton) {
         trainStation = search.text!
         
+        // convert miles to meters
+        distanceRadius = distanceRadius * 1609.34
+        
         // DEBUGGING: Check if saved
         print(trainStation)
         print(distanceRadius)
+        
+        // DEBUG: SEE IF LINK CONCATENATION WORKS
+        // union station
+        let url: NSString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.05618,-118.236487&radius=\(distanceRadius)&types=food&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+        let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let searchUrl: NSURL = NSURL(string: urlString as String)!
+        print(searchUrl)
     }
     
     // GETTER FUNCTIONS //
@@ -53,6 +63,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
     override func didReceiveMemoryWarning() {
