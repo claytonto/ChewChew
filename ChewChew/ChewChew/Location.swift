@@ -9,12 +9,10 @@
 import Foundation
 import UIKit
 
-struct Location {
+class Location {
     var name: String
-    var distance: String
     
-    init(name: String, distance: String) {
+    init(name: String) {
         self.name = name
-        self.distance = distance + " miles"
     }
 }

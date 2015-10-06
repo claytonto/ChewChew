@@ -45,7 +45,7 @@ class LocationsViewController: UITableViewController {
 
         let location = locations[indexPath.row] as Location
         cell.textLabel?.text = location.name
-        cell.detailTextLabel?.text = location.distance
+//        cell.detailTextLabel?.text = location.distance
 
         return cell
     }

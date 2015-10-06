@@ -11,6 +11,6 @@ import Foundation
 // Set up sample data
 
 let locationsData = [
-    Location(name:"Bua Thai", distance: "0.3"),
-    Location(name: "Some Crust Bakery", distance: "0.3"),
-    Location(name: "Starbucks", distance: "0.4") ]
+    Location(name:"Bua Thai"),
+    Location(name: "Some Crust Bakery"),
+    Location(name: "Starbucks") ]
