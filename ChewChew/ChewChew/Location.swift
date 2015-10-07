@@ -11,8 +11,11 @@ import UIKit
 
 class Location {
     var name: String
+    var rating: String
     
-    init(name: String) {
+    init(name: String, rating: String) {
         self.name = name
+        self.rating = rating
     }
+    
 }

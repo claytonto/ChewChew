@@ -46,7 +46,7 @@
                                 </state>
                                 <connections>
                                     <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGq-0i-IdG"/>
-                                    <segue destination="ThS-iO-hi3" kind="show" id="aqq-k7-dkU"/>
+                                    <segue destination="ThS-iO-hi3" kind="show" identifier="populateTableWithLocations" id="aqq-k7-dkU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmH-ck-R3M">

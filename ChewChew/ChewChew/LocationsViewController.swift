@@ -10,12 +10,18 @@ import UIKit
 
 class LocationsViewController: UITableViewController {
     
-    // List of all location results (SAMPLE DATA)
-    var locations:[Location] = locationsData
+    // Data from home page
+    var toPass:[Location]!
 
+    // List of retrieved restaurants (initially empty)
+    var locations:[Location] = ViewController().locationsList
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Retrieve data from home page
+        locations = toPass
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,7 +41,7 @@ class LocationsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Currently showing all possible location results (SAMPLE DATA)
+        // Currently showing all possible location results
         return locations.count
     }
 
@@ -44,8 +50,10 @@ class LocationsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
 
         let location = locations[indexPath.row] as Location
+        
+        // Update labels
         cell.textLabel?.text = location.name
-//        cell.detailTextLabel?.text = location.distance
+        cell.detailTextLabel?.text = "Rating: \(location.rating)"
 
         return cell
     }
