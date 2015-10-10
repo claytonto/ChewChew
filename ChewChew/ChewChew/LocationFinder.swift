@@ -11,16 +11,19 @@ import SwiftyJSON
 import Alamofire
 
 class LocationFinder {
+    var latitude: Double
+    var longitude: Double
     var distance: Double
     var locations: [Location]
     
-    init(distance: Double, locations: [Location]) {
+    init(latitude: Double, longitude: Double, distance: Double, locations: [Location]) {
+        self.latitude = latitude
+        self.longitude = longitude
         self.distance = distance;
         self.locations = locations
         
         // Create the URL request to Google Places
-        // Set union station as default station
-        let url: NSString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.05618,-118.236487&radius=\(self.distance)&types=food&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+        let url: NSString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(self.latitude),\(self.longitude)&radius=\(self.distance)&types=food&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let searchUrl: NSURL = NSURL(string: urlString as String)!
         

@@ -70,8 +70,17 @@ class ViewController: UIViewController {
             trainStation = search.text!
             distanceRadius = distanceRadius * 1609.34
             
+            // Get the latitude and longitude from user input
+            var trainCoordinates: [Double] = [Double]()
+            
+            var stationFinder: TrainStationFinder = TrainStationFinder(station: trainStation, coordinates: trainCoordinates)
+            trainCoordinates = stationFinder.coordinates
+            
+            let trainLatitude = trainCoordinates[0]
+            let trainLongitude = trainCoordinates[1]
+            
             // Retrieve data based on user input
-            var locationFinder : LocationFinder = LocationFinder(distance: distanceRadius, locations: locationsList)
+            var locationFinder : LocationFinder = LocationFinder(latitude: trainLatitude, longitude: trainLongitude, distance: distanceRadius, locations: locationsList)
             locationsList = locationFinder.locations
             
             // Pass data from home page to navigation controller

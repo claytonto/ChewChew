@@ -14,6 +14,8 @@
 		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
 		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; settings = {ASSET_TAGS = (); }; };
+		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; settings = {ASSET_TAGS = (); }; };
 		31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		31C796861BB8D05800A8FB15 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796851BB8D05800A8FB15 /* Location.swift */; settings = {ASSET_TAGS = (); }; };
 		FA357F10268CC92DC5225B13 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8E57C649A2342ADB284E14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -42,6 +44,8 @@
 		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
+		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
+		31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationFinder.swift; sourceTree = "<group>"; };
 		31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		31C796851BB8D05800A8FB15 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5D8E57C649A2342ADB284E14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,8 @@
 				3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */,
 				010EE8871BAB2E890025FC18 /* Main.storyboard */,
 				31C796851BB8D05800A8FB15 /* Location.swift */,
+				31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */,
+				31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */,
 				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
 				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
 				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
@@ -302,6 +308,8 @@
 				3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */,
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
+				31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */,
+				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
 				31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */,
 			);
