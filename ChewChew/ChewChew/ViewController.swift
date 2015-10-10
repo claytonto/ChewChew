@@ -33,10 +33,7 @@ class ViewController: UIViewController {
     
     // Save the train station and distance radius when user hits search button
     @IBAction func searchPressed(sender: UIButton) {
-        trainStation = search.text!
         
-        // convert miles to meters
-        distanceRadius = distanceRadius * 1609.34
     }
     
     // GETTER FUNCTIONS //
@@ -61,6 +58,45 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Error handling for user train station input
+    // Prevents searching for locations without a valid train station
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if identifier == "populateTableWithLocations" {
+            // Train station not specified
+            if (search.text!.isEmpty) {
+                // Get user input
+                let alert = UIAlertView()
+                alert.title = "Train Station Not Specified"
+                alert.message = "Please enter a valid train station"
+                alert.addButtonWithTitle("Close")
+                alert.show()
+                
+                // Need to reset distance or else next valid result
+                // will send a request with invalid distance in meters
+                distanceRadius = Double(slider.value)
+                
+                return false
+            }
+            // Train station not found in dictionary
+            if (trainStationInfo[search.text!] == nil) {
+                // Get user input
+                let alert = UIAlertView()
+                alert.title = "Train Station Not Found"
+                alert.message = "Please enter a valid train station"
+                alert.addButtonWithTitle("Close")
+                alert.show()
+                
+                // Need to reset distance or else next valid result
+                // will send a request with invalid distance in meters
+                distanceRadius = Double(slider.value)
+
+                return false
+            }
+        }
+        // Transition by default
+        return true
     }
 
     // Pass data from home page to list page

@@ -28,9 +28,7 @@ class TrainStationFinder {
         // Retrieve Place Details (JSON)
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
-        
-        print(json)
-        
+                
         // Parse JSON for latitude and longitude
         let latitude:Double = json["result"]["geometry"]["location"]["lat"].double!
         let longitude:Double = json["result"]["geometry"]["location"]["lng"].double!
