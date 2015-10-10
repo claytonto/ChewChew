@@ -19,7 +19,7 @@ class TrainStationFinder {
         
         // Look up the Place ID
         let placeID:String = trainStationInfo[station]!
-        
+                
         // Create the URL request for Place Details
         let url: NSString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
@@ -28,6 +28,8 @@ class TrainStationFinder {
         // Retrieve Place Details (JSON)
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
+        
+        print(json)
         
         // Parse JSON for latitude and longitude
         let latitude:Double = json["result"]["geometry"]["location"]["lat"].double!
