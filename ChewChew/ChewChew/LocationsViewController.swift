@@ -19,6 +19,9 @@ class LocationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set color of bottom bar
+        self.navigationController!.toolbar.barTintColor = UIColor.redColor()
+        
         // Retrieve data from home page
         locations = toPass
         
