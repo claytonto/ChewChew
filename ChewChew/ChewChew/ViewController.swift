@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     // Error handling for user train station input
     // Prevents searching for locations without a valid train station
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier == "populateTableWithLocations" {
+        if identifier == "populateTableWithLocations" {            
             // Train station not specified
             if (search.text!.isEmpty) {
                 // Get user input
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
                 return false
             }
             // Train station not found in dictionary
-            if (trainStationInfo[search.text!] == nil) {
+            else if (trainStationInfo[search.text!.lowercaseString] == nil) {
                 // Get user input
                 let alert = UIAlertView()
                 alert.title = "Train Station Not Found"
@@ -102,9 +102,9 @@ class ViewController: UIViewController {
     // Pass data from home page to list page
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if (segue.identifier == "populateTableWithLocations") {
-            // Get user input
-            trainStation = search.text!
-            distanceRadius = distanceRadius * 1609.34
+            // Get and standardize user input
+            trainStation = search.text!.lowercaseString
+            distanceRadius = distanceRadius * 1609.34   // convert to meters
             
             // Get the latitude and longitude from user input
             var trainCoordinates: [Double] = [Double]()

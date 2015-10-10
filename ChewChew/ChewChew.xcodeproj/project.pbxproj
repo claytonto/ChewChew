@@ -16,6 +16,21 @@
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; settings = {ASSET_TAGS = (); }; };
 		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; settings = {ASSET_TAGS = (); }; };
+		31B50FD51BC8E054009B4BB8 /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC61BC8E054009B4BB8 /* 1Stars.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FD61BC8E054009B4BB8 /* 1Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC71BC8E054009B4BB8 /* 1Stars@2x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FD71BC8E054009B4BB8 /* 1Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC81BC8E054009B4BB8 /* 1Stars@3x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FD81BC8E054009B4BB8 /* 2Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC91BC8E054009B4BB8 /* 2Stars.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FD91BC8E054009B4BB8 /* 2Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCA1BC8E054009B4BB8 /* 2Stars@2x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDA1BC8E054009B4BB8 /* 2Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCB1BC8E054009B4BB8 /* 2Stars@3x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDB1BC8E054009B4BB8 /* 3Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCC1BC8E054009B4BB8 /* 3Stars.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDC1BC8E054009B4BB8 /* 3Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCD1BC8E054009B4BB8 /* 3Stars@2x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDD1BC8E054009B4BB8 /* 3Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCE1BC8E054009B4BB8 /* 3Stars@3x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDE1BC8E054009B4BB8 /* 4Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FCF1BC8E054009B4BB8 /* 4Stars.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FDF1BC8E054009B4BB8 /* 4Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FD01BC8E054009B4BB8 /* 4Stars@2x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FE01BC8E054009B4BB8 /* 4Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FD11BC8E054009B4BB8 /* 4Stars@3x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FE11BC8E054009B4BB8 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FD21BC8E054009B4BB8 /* 5Stars.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FE21BC8E054009B4BB8 /* 5Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FD31BC8E054009B4BB8 /* 5Stars@2x.png */; settings = {ASSET_TAGS = (); }; };
+		31B50FE31BC8E054009B4BB8 /* 5Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FD41BC8E054009B4BB8 /* 5Stars@3x.png */; settings = {ASSET_TAGS = (); }; };
 		31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		31C796861BB8D05800A8FB15 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796851BB8D05800A8FB15 /* Location.swift */; settings = {ASSET_TAGS = (); }; };
 		FA357F10268CC92DC5225B13 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8E57C649A2342ADB284E14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -46,6 +61,21 @@
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
 		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
 		31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationFinder.swift; sourceTree = "<group>"; };
+		31B50FC61BC8E054009B4BB8 /* 1Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Stars.png; sourceTree = "<group>"; };
+		31B50FC71BC8E054009B4BB8 /* 1Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Stars@2x.png"; sourceTree = "<group>"; };
+		31B50FC81BC8E054009B4BB8 /* 1Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Stars@3x.png"; sourceTree = "<group>"; };
+		31B50FC91BC8E054009B4BB8 /* 2Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2Stars.png; sourceTree = "<group>"; };
+		31B50FCA1BC8E054009B4BB8 /* 2Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2Stars@2x.png"; sourceTree = "<group>"; };
+		31B50FCB1BC8E054009B4BB8 /* 2Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2Stars@3x.png"; sourceTree = "<group>"; };
+		31B50FCC1BC8E054009B4BB8 /* 3Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3Stars.png; sourceTree = "<group>"; };
+		31B50FCD1BC8E054009B4BB8 /* 3Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3Stars@2x.png"; sourceTree = "<group>"; };
+		31B50FCE1BC8E054009B4BB8 /* 3Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3Stars@3x.png"; sourceTree = "<group>"; };
+		31B50FCF1BC8E054009B4BB8 /* 4Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4Stars.png; sourceTree = "<group>"; };
+		31B50FD01BC8E054009B4BB8 /* 4Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4Stars@2x.png"; sourceTree = "<group>"; };
+		31B50FD11BC8E054009B4BB8 /* 4Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4Stars@3x.png"; sourceTree = "<group>"; };
+		31B50FD21BC8E054009B4BB8 /* 5Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5Stars.png; sourceTree = "<group>"; };
+		31B50FD31BC8E054009B4BB8 /* 5Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5Stars@2x.png"; sourceTree = "<group>"; };
+		31B50FD41BC8E054009B4BB8 /* 5Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5Stars@3x.png"; sourceTree = "<group>"; };
 		31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		31C796851BB8D05800A8FB15 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5D8E57C649A2342ADB284E14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +134,7 @@
 				31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */,
 				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
 				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
+				31B50FC51BC8E054009B4BB8 /* Images */,
 				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
 				010EE8811BAB2E890025FC18 /* Supporting Files */,
 				315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */,
@@ -134,6 +165,28 @@
 				010EE8981BAB2E890025FC18 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31B50FC51BC8E054009B4BB8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				31B50FC61BC8E054009B4BB8 /* 1Stars.png */,
+				31B50FC71BC8E054009B4BB8 /* 1Stars@2x.png */,
+				31B50FC81BC8E054009B4BB8 /* 1Stars@3x.png */,
+				31B50FC91BC8E054009B4BB8 /* 2Stars.png */,
+				31B50FCA1BC8E054009B4BB8 /* 2Stars@2x.png */,
+				31B50FCB1BC8E054009B4BB8 /* 2Stars@3x.png */,
+				31B50FCC1BC8E054009B4BB8 /* 3Stars.png */,
+				31B50FCD1BC8E054009B4BB8 /* 3Stars@2x.png */,
+				31B50FCE1BC8E054009B4BB8 /* 3Stars@3x.png */,
+				31B50FCF1BC8E054009B4BB8 /* 4Stars.png */,
+				31B50FD01BC8E054009B4BB8 /* 4Stars@2x.png */,
+				31B50FD11BC8E054009B4BB8 /* 4Stars@3x.png */,
+				31B50FD21BC8E054009B4BB8 /* 5Stars.png */,
+				31B50FD31BC8E054009B4BB8 /* 5Stars@2x.png */,
+				31B50FD41BC8E054009B4BB8 /* 5Stars@3x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		5101C8D7181977E2EB433543 /* Pods */ = {
@@ -237,9 +290,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B50FDA1BC8E054009B4BB8 /* 2Stars@3x.png in Resources */,
+				31B50FE31BC8E054009B4BB8 /* 5Stars@3x.png in Resources */,
+				31B50FE21BC8E054009B4BB8 /* 5Stars@2x.png in Resources */,
+				31B50FD61BC8E054009B4BB8 /* 1Stars@2x.png in Resources */,
+				31B50FD91BC8E054009B4BB8 /* 2Stars@2x.png in Resources */,
+				31B50FD81BC8E054009B4BB8 /* 2Stars.png in Resources */,
 				010EE8891BAB2E890025FC18 /* Main.storyboard in Resources */,
+				31B50FDB1BC8E054009B4BB8 /* 3Stars.png in Resources */,
 				010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */,
+				31B50FDF1BC8E054009B4BB8 /* 4Stars@2x.png in Resources */,
+				31B50FDD1BC8E054009B4BB8 /* 3Stars@3x.png in Resources */,
+				31B50FE01BC8E054009B4BB8 /* 4Stars@3x.png in Resources */,
 				010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */,
+				31B50FD51BC8E054009B4BB8 /* 1Stars.png in Resources */,
+				31B50FD71BC8E054009B4BB8 /* 1Stars@3x.png in Resources */,
+				31B50FDE1BC8E054009B4BB8 /* 4Stars.png in Resources */,
+				31B50FDC1BC8E054009B4BB8 /* 3Stars@2x.png in Resources */,
+				31B50FE11BC8E054009B4BB8 /* 5Stars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -428,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

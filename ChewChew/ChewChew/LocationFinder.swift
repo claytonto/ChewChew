@@ -30,14 +30,35 @@ class LocationFinder {
         // Retrieve list of places (JSON)
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
-        
+                
         // Parse JSON
         for result in json["results"].arrayValue {
+            // Location name
             let resultName:String = result["name"].stringValue
-            let resultRating:String = result["rating"].stringValue
+            
+            // Location price level
+            var resultPrice:String = result["price_level"].stringValue
+            
+            // Show price levels as dollar amount
+            if (resultPrice == "1") {
+                resultPrice = "$"
+            } else if (resultPrice == "2") {
+                resultPrice = "$$"
+            } else if (resultPrice == "3") {
+                resultPrice = "$$$"
+            } else if (resultPrice == "4") {
+                resultPrice = "$$$$"
+            }
+            
+            // Location rating
+            var resultRating:String = result["rating"].stringValue
+            // Locations without ratings
+            if (resultRating == "") {
+                resultRating = "0.0"
+            }
             
             // Populate list
-            let location = Location(name: resultName, rating: resultRating)
+            let location = Location(name: resultName, price: resultPrice, rating: resultRating)
             self.locations.append(location)
         }
     }

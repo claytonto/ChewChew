@@ -51,11 +51,34 @@ class LocationsViewController: UITableViewController {
 
         let location = locations[indexPath.row] as Location
         
-        // Update labels
-        cell.textLabel?.text = location.name
-        cell.detailTextLabel?.text = "Rating: \(location.rating)"
-
+        // Show location name
+        if let nameLabel = cell.viewWithTag(100) as? UILabel {
+            nameLabel.text = location.name
+        }
+        
+        // Show location price level
+        if let priceLabel = cell.viewWithTag(101) as? UILabel {
+            priceLabel.text = location.price
+        }
+        
+        // Show ratings as a row of stars
+        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+            let exactRating = Double(location.rating)   // string to double
+            let rating: Int = Int(round(exactRating!))  // double to integer
+            
+            // Do not show ratings for places that don't have any
+            if (rating != 0) {
+                ratingImageView.image = self.imageForRating(rating)
+            }
+        }
+        
         return cell
+    }
+    
+    // Retrieve image to match rating
+    func imageForRating(rating:Int) -> UIImage? {
+        let imageName = "\(rating)Stars"
+        return UIImage(named: imageName)
     }
 
     /*
