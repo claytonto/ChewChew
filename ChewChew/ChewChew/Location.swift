@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-
-struct Location {
+class Location {
     var name: String
-    var distance: String
+    var price: String
+    var rating: String
     
-    init(name: String, distance: String) {
+    init(name: String, price: String, rating: String) {
         self.name = name
-        self.distance = distance + " miles"
+        self.price = price
+        self.rating = rating
     }
+    
 }

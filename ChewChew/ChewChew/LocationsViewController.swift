@@ -10,12 +10,21 @@ import UIKit
 
 class LocationsViewController: UITableViewController {
     
-    // List of all location results (SAMPLE DATA)
-    var locations:[Location] = locationsData
+    // Data from home page
+    var toPass:[Location]!
 
+    // List of retrieved restaurants (initially empty)
+    var locations:[Location] = ViewController().locationsList
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Set color of bottom bar
+        self.navigationController!.toolbar.barTintColor = UIColor.redColor()
+        
+        // Retrieve data from home page
+        locations = toPass
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,7 +44,7 @@ class LocationsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Currently showing all possible location results (SAMPLE DATA)
+        // Currently showing all possible location results
         return locations.count
     }
 
@@ -44,10 +53,35 @@ class LocationsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
 
         let location = locations[indexPath.row] as Location
-        cell.textLabel?.text = location.name
-        cell.detailTextLabel?.text = location.distance
-
+        
+        // Show location name
+        if let nameLabel = cell.viewWithTag(100) as? UILabel {
+            nameLabel.text = location.name
+        }
+        
+        // Show location price level
+        if let priceLabel = cell.viewWithTag(101) as? UILabel {
+            priceLabel.text = location.price
+        }
+        
+        // Show ratings as a row of stars
+        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+            let exactRating = Double(location.rating)   // string to double
+            let rating: Int = Int(round(exactRating!))  // double to integer
+            
+            // Do not show ratings for places that don't have any
+            if (rating != 0) {
+                ratingImageView.image = self.imageForRating(rating)
+            }
+        }
+        
         return cell
+    }
+    
+    // Retrieve image to match rating
+    func imageForRating(rating:Int) -> UIImage? {
+        let imageName = "\(rating)Stars"
+        return UIImage(named: imageName)
     }
 
     /*
