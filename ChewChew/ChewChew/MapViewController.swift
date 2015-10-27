@@ -11,11 +11,10 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
 
-
     @IBOutlet var Map: GMSMapView!
     
-    override func viewDidLoad() {
-        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 8.0)
+    override func  viewDidLoad() {
+        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 12.0)
         Map.camera = camera
 
     }

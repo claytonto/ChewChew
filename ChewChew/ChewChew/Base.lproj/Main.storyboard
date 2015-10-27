@@ -102,6 +102,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xf7-63-Luh" secondAttribute="trailing" constant="40" id="wlU-Dd-39U"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="X1t-aK-rd3" id="AS6-Bz-GF8"/>
                         <outlet property="search" destination="xf7-63-Luh" id="OWf-pP-Y2g"/>
@@ -178,7 +180,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UjW-wP-pls" kind="show" id="tFi-Fj-qgT"/>
+                                    <segue destination="UjW-wP-pls" kind="show" identifier="ShowMap" id="AJx-yH-mhN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -220,12 +222,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="Map" destination="Lgm-B6-DVW" id="Sbb-nW-8Fo"/>
+                        <outlet property="Map" destination="Lgm-B6-DVW" id="lvB-eN-w4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNd-Pz-qSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="425"/>
+            <point key="canvasLocation" x="2545" y="417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mG7-dM-U47">
