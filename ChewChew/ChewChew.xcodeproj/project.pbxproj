@@ -13,6 +13,7 @@
 		010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88A1BAB2E890025FC18 /* Images.xcassets */; };
 		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
 		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
+		017FC2421BD8A8000048254C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FC2411BD8A8000048254C /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; settings = {ASSET_TAGS = (); }; };
 		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; settings = {ASSET_TAGS = (); }; };
@@ -63,6 +64,7 @@
 		010EE8931BAB2E890025FC18 /* ChewChewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChewChewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		010EE8981BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
+		017FC2411BD8A8000048254C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
 		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
@@ -138,13 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				010EE8831BAB2E890025FC18 /* AppDelegate.swift */,
-				010EE8851BAB2E890025FC18 /* ViewController.swift */,
+				017FC2401BD8A7850048254C /* Controllers */,
 				3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */,
 				010EE8871BAB2E890025FC18 /* Main.storyboard */,
 				31C796851BB8D05800A8FB15 /* Location.swift */,
 				31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */,
 				31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */,
-				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
 				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
 				31B50FC51BC8E054009B4BB8 /* Images */,
 				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
@@ -177,6 +178,16 @@
 				010EE8981BAB2E890025FC18 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		017FC2401BD8A7850048254C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				017FC2411BD8A8000048254C /* MapViewController.swift */,
+				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
+				010EE8851BAB2E890025FC18 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		31B50FC51BC8E054009B4BB8 /* Images */ = {
@@ -404,6 +415,7 @@
 				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
 				31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */,
+				017FC2421BD8A8000048254C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
