@@ -57,8 +57,14 @@ class LocationFinder {
                 resultRating = "0.0"
             }
             
+            var locationData: [Double] = []
+            let lat :Double = result["geometry"]["location"]["lat"].double!
+            let long :Double = result["geometry"]["location"]["lng"].double!
+            locationData.append(lat)
+            locationData.append(long)
+            
             // Populate list
-            let location = Location(name: resultName, price: resultPrice, rating: resultRating)
+            let location = Location(name: resultName, price: resultPrice, rating: resultRating, location: locationData )
             self.locations.append(location)
         }
     }

@@ -14,6 +14,7 @@
 		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
 		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
 		017FC2421BD8A8000048254C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FC2411BD8A8000048254C /* MapViewController.swift */; };
+		018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186948F1BE17FCE00048479 /* LocationsViewController.swift */; };
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; };
 		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; };
 		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; };
@@ -38,7 +39,6 @@
 		31B50FED1BC9B059009B4BB8 /* powered_by_google_on_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FE71BC9B059009B4BB8 /* powered_by_google_on_white.png */; };
 		31B50FEE1BC9B059009B4BB8 /* powered_by_google_on_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FE81BC9B059009B4BB8 /* powered_by_google_on_white@2x.png */; };
 		31B50FEF1BC9B059009B4BB8 /* powered_by_google_on_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FE91BC9B059009B4BB8 /* powered_by_google_on_white@3x.png */; };
-		31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */; };
 		31C796861BB8D05800A8FB15 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796851BB8D05800A8FB15 /* Location.swift */; };
 		FA357F10268CC92DC5225B13 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8E57C649A2342ADB284E14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -65,6 +65,7 @@
 		010EE8981BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
 		017FC2411BD8A8000048254C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0186948F1BE17FCE00048479 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
 		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		31B50FE71BC9B059009B4BB8 /* powered_by_google_on_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powered_by_google_on_white.png; sourceTree = "<group>"; };
 		31B50FE81BC9B059009B4BB8 /* powered_by_google_on_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered_by_google_on_white@2x.png"; sourceTree = "<group>"; };
 		31B50FE91BC9B059009B4BB8 /* powered_by_google_on_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered_by_google_on_white@3x.png"; sourceTree = "<group>"; };
-		31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		31C796851BB8D05800A8FB15 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5D8E57C649A2342ADB284E14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2042054268C210BF288498 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				017FC2411BD8A8000048254C /* MapViewController.swift */,
-				31C796831BB8CEBD00A8FB15 /* LocationsViewController.swift */,
+				0186948F1BE17FCE00048479 /* LocationsViewController.swift */,
 				010EE8851BAB2E890025FC18 /* ViewController.swift */,
 			);
 			name = Controllers;
@@ -411,10 +411,10 @@
 				3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */,
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
+				018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */,
 				31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */,
 				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
-				31C796841BB8CEBD00A8FB15 /* LocationsViewController.swift in Sources */,
 				017FC2421BD8A8000048254C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
