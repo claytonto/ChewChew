@@ -29,7 +29,7 @@ var trainStationInfo: [String: String] =
         "glendale": "ChIJtT_j093AwoARrhE49L9uqj8",
         "industry": "ChIJlUh8d5srw4ARcXb5xPxfkTg",
         "irvine": "ChIJyRPVlwHo3IAR6X6qJvUyh54",
-        "union station": "ChIJB8pQyya4t4kRYbNpE6kcA-Y",
+        "union station": "ChIJvRdsaUTGwoAR_852xe9geSY",
         
         "laguna": "ChIJR2GGzfbu3IAR-fMJof1fPe8",
         "mission viejo": "ChIJR2GGzfbu3IAR-fMJof1fPe8",

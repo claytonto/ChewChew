@@ -124,6 +124,9 @@ class ViewController: UIViewController {
             let firstPage = segue.destinationViewController as! UINavigationController
             let secondPage = firstPage.topViewController as! LocationsViewController;
             secondPage.toPass = locationsList
+            secondPage.station = search.text!
+            secondPage.stationCoordinates = stationFinder.coordinates
+            
         }
     }
 

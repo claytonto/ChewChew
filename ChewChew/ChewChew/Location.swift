@@ -13,11 +13,13 @@ class Location {
     var name: String
     var price: String
     var rating: String
+    var coordindates: [Double]
     
-    init(name: String, price: String, rating: String) {
+    init(name: String, price: String, rating: String, location: [Double]) {
         self.name = name
         self.price = price
         self.rating = rating
+        self.coordindates = location
     }
     
 }

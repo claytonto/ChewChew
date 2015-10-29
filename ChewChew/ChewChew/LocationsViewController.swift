@@ -12,13 +12,14 @@ class LocationsViewController: UITableViewController {
     
     // Data from home page
     var toPass:[Location]!
+    var station: String!
+    var stationCoordinates: [Double]!
 
     // List of retrieved restaurants (initially empty)
     var locations:[Location] = ViewController().locationsList
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Set color of bottom bar
         self.navigationController!.toolbar.barTintColor = UIColor.redColor()
         
@@ -119,14 +120,23 @@ class LocationsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "ShowMap"){
+            let nextPage = segue.destinationViewController as! MapViewController
+            // getting the selected row
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let clickedLocation =  locations[indexPath.row]
+            // passing the station and location data from selected row
+            nextPage.locationCoordinates = clickedLocation.coordindates
+            nextPage.stationCoordinates = stationCoordinates
+            nextPage.locationName = clickedLocation.name
+            nextPage.stationName = station
+        }
     }
-    */
+
 
 }
