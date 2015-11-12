@@ -30,7 +30,6 @@ class LocationFinder {
         // Retrieve list of places (JSON)
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
-                
         // Parse JSON
         for result in json["results"].arrayValue {
             // Location name
@@ -62,6 +61,7 @@ class LocationFinder {
             let long :Double = result["geometry"]["location"]["lng"].double!
             locationData.append(lat)
             locationData.append(long)
+            
             
             // Populate list
             let location = Location(name: resultName, price: resultPrice, rating: resultRating, location: locationData )

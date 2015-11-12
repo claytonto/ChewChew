@@ -14,6 +14,7 @@ class Location {
     var price: String
     var rating: String
     var coordindates: [Double]
+
     
     init(name: String, price: String, rating: String, location: [Double]) {
         self.name = name
