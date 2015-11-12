@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var distanceRadius: Double = 1.5;
     
     var locationsList: [Location] = [Location]()
+    var reviewList: [Review] = [Review]()
     
     @IBOutlet weak var button: UIButton!
     
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
     
     // Error handling for user train station input
     // Prevents searching for locations without a valid train station
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "populateTableWithLocations" {            
             // Train station not specified
             if (search.text!.isEmpty) {
@@ -100,7 +101,7 @@ class ViewController: UIViewController {
     }
 
     // Pass data from home page to list page
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "populateTableWithLocations") {
             // Get and standardize user input
             trainStation = search.text!.lowercaseString
@@ -109,14 +110,14 @@ class ViewController: UIViewController {
             // Get the latitude and longitude from user input
             var trainCoordinates: [Double] = [Double]()
             
-            var stationFinder: TrainStationFinder = TrainStationFinder(station: trainStation, coordinates: trainCoordinates)
+            let stationFinder: TrainStationFinder = TrainStationFinder(station: trainStation, coordinates: trainCoordinates)
             trainCoordinates = stationFinder.coordinates
             
             let trainLatitude = trainCoordinates[0]
             let trainLongitude = trainCoordinates[1]
             
             // Retrieve data based on user input
-            var locationFinder : LocationFinder = LocationFinder(latitude: trainLatitude, longitude: trainLongitude, distance: distanceRadius, locations: locationsList)
+            let locationFinder : LocationFinder = LocationFinder(latitude: trainLatitude, longitude: trainLongitude, distance: distanceRadius, locations: locationsList)
             locationsList = locationFinder.locations
             
             // Pass data from home page to navigation controller

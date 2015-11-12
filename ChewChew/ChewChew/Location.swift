@@ -14,13 +14,15 @@ class Location {
     var price: String
     var rating: String
     var coordindates: [Double]
+    var reviews: [Review]
 
     
-    init(name: String, price: String, rating: String, location: [Double]) {
+    init(name: String, price: String, rating: String, location: [Double], reviews: [Review]) {
         self.name = name
         self.price = price
         self.rating = rating
         self.coordindates = location
+        self.reviews = reviews
     }
     
 }

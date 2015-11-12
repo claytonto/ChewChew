@@ -40,6 +40,8 @@
 		31B50FEE1BC9B059009B4BB8 /* powered_by_google_on_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FE81BC9B059009B4BB8 /* powered_by_google_on_white@2x.png */; };
 		31B50FEF1BC9B059009B4BB8 /* powered_by_google_on_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FE91BC9B059009B4BB8 /* powered_by_google_on_white@3x.png */; };
 		31C796861BB8D05800A8FB15 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C796851BB8D05800A8FB15 /* Location.swift */; };
+		A236E3E11BF4AF4E00366024 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A236E3E01BF4AF4E00366024 /* ReviewTableViewController.swift */; };
+		A236E3E31BF4DE8800366024 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A236E3E21BF4DE8800366024 /* Review.swift */; };
 		FA357F10268CC92DC5225B13 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8E57C649A2342ADB284E14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		31C796851BB8D05800A8FB15 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5D8E57C649A2342ADB284E14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2042054268C210BF288498 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A236E3E01BF4AF4E00366024 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		A236E3E21BF4DE8800366024 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C1201C4EEF07045C63973600 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */,
 				010EE8871BAB2E890025FC18 /* Main.storyboard */,
 				31C796851BB8D05800A8FB15 /* Location.swift */,
+				A236E3E21BF4DE8800366024 /* Review.swift */,
 				31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */,
 				31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */,
 				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
@@ -186,6 +191,7 @@
 				017FC2411BD8A8000048254C /* MapViewController.swift */,
 				0186948F1BE17FCE00048479 /* LocationsViewController.swift */,
 				010EE8851BAB2E890025FC18 /* ViewController.swift */,
+				A236E3E01BF4AF4E00366024 /* ReviewTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -409,9 +415,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */,
+				A236E3E11BF4AF4E00366024 /* ReviewTableViewController.swift in Sources */,
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
 				018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */,
+				A236E3E31BF4DE8800366024 /* Review.swift in Sources */,
 				31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */,
 				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
