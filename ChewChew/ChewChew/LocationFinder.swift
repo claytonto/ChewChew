@@ -85,7 +85,7 @@ class LocationFinder {
         let jsonData = NSData(contentsOfURL: searchUrlReview)
         let json = JSON(data: jsonData!)
         
-        print(json)
+        //print(json)
         
         var reviews: [Review] = []
 
