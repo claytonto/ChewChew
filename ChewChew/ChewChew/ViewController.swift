@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         label.text = "\(distanceRadius) miles"          // update label
     }
     
+    // Save the train station and distance radius when user hits search button
+    @IBAction func searchPressed(sender: UIButton) {
+        
+    }
+    
     // GETTER FUNCTIONS //
     
     // Get the user's train station

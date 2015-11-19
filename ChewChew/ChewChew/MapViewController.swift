@@ -46,11 +46,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let route = GMSPolyline(path: path)
         route.map = Map
         
-        //Map.addSubview(trackButton)
+        Map.addSubview(trackButton)
         
         // request access to the user's location
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
         
         Map.delegate = self
     }
@@ -125,10 +124,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         return path
     }
     
-    
-    
-//    // FUNCTIONS FOR TRACKING THESE METHODS ARE STILL IN DEVELOPMENT
-//    //COMMENT OUT FUNCTIONS AS NEEDED TO TEST
 //    func startWalking(){
 //        
 //        Map.myLocationEnabled = true
@@ -155,7 +150,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 //        trackButton.setTitle("Start Walking", forState: .Normal)
 //    }
 //    
-//    @IBAction func trackPressed(sender: UIButton) {
+    @IBAction func trackPressed(sender: UIButton) {
+        locationManager.requestWhenInUseAuthorization()
+        
+        // draw blue dot
+        Map.myLocationEnabled = true
+        // add button
+        Map.settings.myLocationButton = true
+
 //        if sender == trackButton{
 //            if Map.myLocationEnabled == false{
 //                startWalking()
@@ -163,8 +165,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 //                stopWalking()
 //            }
 //        }
-//    }
-//
+    }
+
     
     /*
     // MARK: - Navigation
@@ -186,14 +188,8 @@ extension MapViewController: CLLocationManagerDelegate {
         
         // verify that user granted permission
         if status == CLAuthorizationStatus.AuthorizedWhenInUse {
-            
             // get updates on user's location
             locationManager.startUpdatingLocation()
-            
-            // draw blue dot
-            Map.myLocationEnabled = true
-            // add button
-            Map.settings.myLocationButton = true
         }
     }
     
