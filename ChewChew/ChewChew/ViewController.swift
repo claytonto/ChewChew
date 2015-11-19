@@ -32,11 +32,6 @@ class ViewController: UIViewController {
         label.text = "\(distanceRadius) miles"          // update label
     }
     
-    // Save the train station and distance radius when user hits search button
-    @IBAction func searchPressed(sender: UIButton) {
-        
-    }
-    
     // GETTER FUNCTIONS //
     
     // Get the user's train station
@@ -130,6 +125,13 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    // Dismiss the keyboard when user taps outside of search bar
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
 
 }
 
