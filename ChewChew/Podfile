@@ -7,3 +7,5 @@ use_frameworks!
 pod 'SwiftyJSON', '~> 2.3.0'
 
 pod 'Alamofire', '~> 2.0.2'
+
+pod 'GooglePlacesAutocomplete', '~> 0.3.0'

@@ -1,16 +1,19 @@
 PODS:
   - Alamofire (2.0.2)
   - GoogleMaps (1.10.2)
+  - GooglePlacesAutocomplete (0.3.0)
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0.2)
   - GoogleMaps
+  - GooglePlacesAutocomplete (~> 0.3.0)
   - SwiftyJSON (~> 2.3.0)
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   GoogleMaps: 5c92e599b07b0a2a9b367c5dd128edc629bddfea
+  GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
 COCOAPODS: 0.38.2

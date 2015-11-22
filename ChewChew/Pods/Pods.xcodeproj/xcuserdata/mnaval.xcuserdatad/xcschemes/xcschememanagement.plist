@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GooglePlacesAutocomplete.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>244ACBADC97B1E27AD0DC64A2C469717</key>
+		<key>74E3FCB403BB927DA1D898EC57F5964C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>651B0BDA8043238CCAD30D1FBB417232</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8AFD3E7AC4C6BBE11F2BBBF23BECC261</key>
+		<key>A6E3D3831A7403EB30CCBCB44EF63E94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD6EE1246A1C128441C671F983ADFF18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
