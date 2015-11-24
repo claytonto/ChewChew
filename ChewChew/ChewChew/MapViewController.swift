@@ -28,6 +28,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var stationPosition: CLLocationCoordinate2D!
     var locationPosition: CLLocationCoordinate2D!
     
+    // whether or not to track user's location
+    var trackLocation: Bool = true;
+    
     override func viewDidLoad() {
         // making the positions for the station and the marker
         stationPosition = CLLocationCoordinate2DMake(stationCoordinates[0], stationCoordinates[1])
@@ -124,47 +127,34 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         return path
     }
     
-//    func startWalking(){
-//        
-//        Map.myLocationEnabled = true
-//        trackButton.setTitle("Stop Walking", forState: .Normal)
-//        track()
-//        
-//    }
-//    
-//    func track(){
-//        var lat = Map.myLocation.coordinate.latitude
-//        var lng = Map.myLocation.coordinate.longitude
-//        var cam = GMSCameraPosition()
-//        
-//        while Map.myLocationEnabled == true{
-//            lat = Map.myLocation.coordinate.latitude
-//            lng = Map.myLocation.coordinate.longitude
-//            cam = GMSCameraPosition.cameraWithLatitude(lat, longitude: lng, zoom: 15.0)
-//            Map.camera = cam
-//        }
-//    }
-//    
-//    func stopWalking(){
-//        Map.myLocationEnabled = false
-//        trackButton.setTitle("Start Walking", forState: .Normal)
-//    }
-//    
-    @IBAction func trackPressed(sender: UIButton) {
-        locationManager.requestWhenInUseAuthorization()
-        
+    func startWalking(){
         // draw blue dot
         Map.myLocationEnabled = true
         // add button
         Map.settings.myLocationButton = true
+        
+        trackButton.setTitle("Stop Walking", forState: .Normal)
+    }
 
-//        if sender == trackButton{
-//            if Map.myLocationEnabled == false{
-//                startWalking()
-//            } else {
-//                stopWalking()
-//            }
-//        }
+    
+    func stopWalking(){
+        Map.myLocationEnabled = false
+        Map.settings.myLocationButton = false
+        
+        trackButton.setTitle("Start Walking", forState: .Normal)
+    }
+
+    @IBAction func trackPressed(sender: UIButton) {
+        locationManager.requestWhenInUseAuthorization()
+        
+        // toggle between tracking and not tracking user's location
+        if (trackLocation) {
+            startWalking()
+            trackLocation = false;
+        } else {
+            stopWalking()
+            trackLocation = true;
+        }
     }
 
     

@@ -1,11 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
-pod 'GoogleMaps'
+pod 'GoogleMaps', '~> 1.10.5'
 
 use_frameworks!
 pod 'SwiftyJSON', '~> 2.3.0'
 
 pod 'Alamofire', '~> 2.0.2'
-
-pod 'GooglePlacesAutocomplete', '~> 0.3.0'

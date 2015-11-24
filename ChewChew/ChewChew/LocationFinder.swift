@@ -65,8 +65,9 @@ class LocationFinder {
             
             
             // Create the URL request to Google Places for REVIEW
-            let placeID:String = result["place_id"].stringValue
-            let reviews:[Review] = getReviews(placeID)
+            //let placeID:String = result["place_id"].stringValue
+            let reviews:[Review] = [Review]()
+            //let reviews:[Review] = getReviews(placeID)
             
             // Populate list
             let location = Location(name: resultName, price: resultPrice, rating: resultRating, location: locationData, reviews: reviews)

@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
-import GooglePlacesAutocomplete
 
 class ViewController: UIViewController {
     
@@ -54,10 +53,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let gpaViewController = GooglePlacesAutocomplete(
-            apiKey:,
-            placeType: .Address)
     }
 
     override func didReceiveMemoryWarning() {
