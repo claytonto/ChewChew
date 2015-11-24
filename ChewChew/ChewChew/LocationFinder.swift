@@ -65,9 +65,15 @@ class LocationFinder {
             
             
             // Create the URL request to Google Places for REVIEW
+            
+            // TO DO: RE-ENABLE REVIEWS
+            // TEMPORARILY DISABLED FOR TESTING PURPOSES 
+            // SO THAT API QUOTA DOES NOT HIT LIMIT
+            
             //let placeID:String = result["place_id"].stringValue
-            let reviews:[Review] = [Review]()
             //let reviews:[Review] = getReviews(placeID)
+            
+            let reviews:[Review] = [Review]()
             
             // Populate list
             let location = Location(name: resultName, price: resultPrice, rating: resultRating, location: locationData, reviews: reviews)

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="43W-gX-aIj">
-                                <rect key="frame" x="194" y="304" width="205" height="31"/>
+                                <rect key="frame" x="194" y="405" width="205" height="31"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="0.28683072334830395" blue="0.3120062124016455" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-xF-H9K">
-                                <rect key="frame" x="199" y="265" width="67" height="21"/>
+                                <rect key="frame" x="199" y="366" width="67" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,14 +53,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmH-ck-R3M">
-                                <rect key="frame" x="174" y="308" width="8" height="21"/>
+                                <rect key="frame" x="174" y="409" width="8" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="(in miles)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1t-aK-rd3">
-                                <rect key="frame" x="342" y="263" width="77" height="21"/>
+                                <rect key="frame" x="342" y="364" width="77" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,13 +73,8 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.092421955147700352" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="xf7-63-Luh">
-                                <rect key="frame" x="174" y="196" width="245" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
-                            </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-C3-fSm">
-                                <rect key="frame" x="405" y="308" width="14" height="21"/>
+                                <rect key="frame" x="405" y="409" width="14" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="14" id="Vbe-T6-MbU"/>
@@ -88,35 +83,40 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3Y-Dg-jRC">
+                                <rect key="frame" x="89" y="207" width="414" height="128"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="qLN-cr-b8z"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="o00-ID-GbB"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XbX-v9-RGf" secondAttribute="trailing" constant="50" id="5Hb-HL-BMb"/>
                             <constraint firstItem="43W-gX-aIj" firstAttribute="leading" secondItem="NmH-ck-R3M" secondAttribute="trailing" constant="20" id="8eP-0V-L11"/>
-                            <constraint firstItem="xf7-63-Luh" firstAttribute="top" secondItem="RZp-qC-rHR" secondAttribute="bottom" constant="15.5" id="8pC-wY-s23"/>
                             <constraint firstItem="WgC-08-Wyr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Akc-1Q-LsG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RZp-qC-rHR" secondAttribute="trailing" constant="50" id="CaX-Ow-lDc"/>
-                            <constraint firstItem="DWI-xF-H9K" firstAttribute="top" secondItem="xf7-63-Luh" secondAttribute="bottom" constant="25" id="IC2-Re-DtJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DWI-xF-H9K" secondAttribute="trailing" constant="50" id="Idf-Ko-zJJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IjD-C3-fSm" secondAttribute="trailing" constant="25" id="Ift-i5-ZKJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X1t-aK-rd3" secondAttribute="trailing" constant="50" id="Uaj-oP-5ZP"/>
                             <constraint firstItem="IjD-C3-fSm" firstAttribute="leading" secondItem="43W-gX-aIj" secondAttribute="trailing" constant="20" id="UuE-9K-x40"/>
                             <constraint firstItem="NmH-ck-R3M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Y70-WP-Qdd"/>
-                            <constraint firstItem="xf7-63-Luh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="dYu-je-OdD"/>
+                            <constraint firstItem="D3Y-Dg-jRC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="dxl-VI-gz1"/>
                             <constraint firstItem="RZp-qC-rHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="ed6-NV-psB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WgC-08-Wyr" secondAttribute="trailing" constant="50" id="o5x-ha-n2n"/>
                             <constraint firstItem="DWI-xF-H9K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="ouS-ds-qQ2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WgC-08-Wyr" secondAttribute="bottom" constant="50" id="qa5-xo-lOq"/>
                             <constraint firstItem="XbX-v9-RGf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="uIQ-AK-fT7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xf7-63-Luh" secondAttribute="trailing" constant="40" id="wlU-Dd-39U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D3Y-Dg-jRC" secondAttribute="trailing" constant="50" id="xEc-WJ-hQb"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="X1t-aK-rd3" id="AS6-Bz-GF8"/>
-                        <outlet property="search" destination="xf7-63-Luh" id="OWf-pP-Y2g"/>
+                        <outlet property="placePicker" destination="D3Y-Dg-jRC" id="Jyw-Pe-wTw"/>
                         <outlet property="slider" destination="43W-gX-aIj" id="eRQ-5P-MLK"/>
                     </connections>
                 </viewController>
@@ -326,6 +326,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue6-WF-IKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="387"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jQN-5j-RbL">
+            <objects>
+                <viewController id="LnZ-bU-CuP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="toI-11-Sip"/>
+                        <viewControllerLayoutGuide type="bottom" id="N2v-83-k0i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0La-6f-lhu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTK-d7-pcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

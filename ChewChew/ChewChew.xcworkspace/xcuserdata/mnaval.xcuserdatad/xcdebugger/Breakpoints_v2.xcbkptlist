@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChewChew/ViewController.swift"
-            timestampString = "469600341.816571"
+            timestampString = "470030709.543049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "shouldPerformSegueWithIdentifier(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
