@@ -11,6 +11,10 @@ import SwiftyJSON
 import Alamofire
 import GoogleMaps
 
+/*
+    Home page
+        Allow the user to enter train station and distance willing to travel
+*/
 class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
     @IBOutlet weak var autocompleteTextfield: AutoCompleteTextField!
