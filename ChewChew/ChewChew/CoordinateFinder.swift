@@ -9,23 +9,29 @@
 import Foundation
 import SwiftyJSON
 
-class TrainStationFinder {
-    var station: String
+/*
+    Find a Place ID's corresponding latitude and longitude coordinates
+    Input: PlaceID and an array to store the coordinates
+    Can directly access the updated coordinates array
+*/
+class CoordinateFinder {
+    // Latitude and longitude coordinates
     var coordinates: [Double]
     
-    init(station: String, coordinates: [Double]) {
-        self.station = station;
+    init(placeID: String, coordinates: [Double]) {
+        // Override given empty coordinate array
         self.coordinates = coordinates
-        
-        // Look up the Place ID
-        let placeID:String = trainStationInfo[station]!
-                
+    
         // Create the URL request for Place Details
-        let url: NSString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+        let baseURL: String = "https://maps.googleapis.com/maps/api/place/details/json?"
+        let apiKey: String = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+        let url: NSString = "\(baseURL)placeid=\(placeID)&key=\(apiKey)"
+        
+        // Format URL for JSON request
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let searchUrl: NSURL = NSURL(string:urlString as String)!
         
-        // Retrieve Place Details (JSON)
+        // Retrieve Place Details
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
                 
@@ -33,6 +39,7 @@ class TrainStationFinder {
         let latitude:Double = json["result"]["geometry"]["location"]["lat"].double!
         let longitude:Double = json["result"]["geometry"]["location"]["lng"].double!
 
+        // Save coordinates
         self.coordinates.append(latitude)
         self.coordinates.append(longitude)
     }

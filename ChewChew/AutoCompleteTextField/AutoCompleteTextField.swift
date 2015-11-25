@@ -135,7 +135,6 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
     //MARK: - UITableViewDelegate
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        print("selected")
         onSelect(cell!.textLabel!.text!, indexPath)
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             tableView.hidden = self.hidesWhenSelected

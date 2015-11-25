@@ -17,7 +17,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let locationManager = CLLocationManager()
     
     // station and location data from results page
-    var stationName: String!
+    // var stationName: String!
     var locationName: String!
     var stationCoordinates: [Double]!
     var locationCoordinates: [Double]!

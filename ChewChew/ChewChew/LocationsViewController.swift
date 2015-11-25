@@ -12,7 +12,6 @@ class LocationsViewController: UITableViewController {
     
     // Data from home page
     var toPass:[Location]!
-    var station: String!
     var stationCoordinates: [Double]!
 
     // List of retrieved restaurants (initially empty)
@@ -131,10 +130,10 @@ class LocationsViewController: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let clickedLocation =  locations[indexPath.row]
             // passing the station and location data from selected row
-            nextPage.locationCoordinates = clickedLocation.coordindates
+            nextPage.locationCoordinates = clickedLocation.coordinates
             nextPage.stationCoordinates = stationCoordinates
             nextPage.locationName = clickedLocation.name
-            nextPage.stationName = station
+//            nextPage.stationName = station
         }
     }
 
