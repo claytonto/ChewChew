@@ -18,6 +18,8 @@
 		31133DD21BFD80E30081DD1E /* launchFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 31133DD11BFD80E30081DD1E /* launchFile.png */; };
 		31133DD41BFD82010081DD1E /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 31133DD31BFD82010081DD1E /* name.png */; };
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; };
+		318D67481C0562D500AC5218 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */; };
+		318D674A1C056BB300AC5218 /* AutocompleteLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D67491C056BB300AC5218 /* AutocompleteLocation.swift */; };
 		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; };
 		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; };
 		31B50FD51BC8E054009B4BB8 /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC61BC8E054009B4BB8 /* 1Stars.png */; };
@@ -74,6 +76,8 @@
 		31133DD31BFD82010081DD1E /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
+		318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		318D67491C056BB300AC5218 /* AutocompleteLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteLocation.swift; sourceTree = "<group>"; };
 		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
 		31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationFinder.swift; sourceTree = "<group>"; };
 		31B50FC61BC8E054009B4BB8 /* 1Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Stars.png; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		010EE8751BAB2E890025FC18 = {
 			isa = PBXGroup;
 			children = (
+				318D67461C0562D500AC5218 /* AutoCompleteTextField */,
 				010EE8801BAB2E890025FC18 /* ChewChew */,
 				010EE8961BAB2E890025FC18 /* ChewChewTests */,
 				010EE87F1BAB2E890025FC18 /* Products */,
@@ -198,6 +203,15 @@
 				A236E3E01BF4AF4E00366024 /* ReviewTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		318D67461C0562D500AC5218 /* AutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				318D67491C056BB300AC5218 /* AutocompleteLocation.swift */,
+				318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */,
+			);
+			path = AutoCompleteTextField;
 			sourceTree = "<group>";
 		};
 		31B50FC51BC8E054009B4BB8 /* Images */ = {
@@ -425,6 +439,7 @@
 			files = (
 				3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */,
 				A236E3E11BF4AF4E00366024 /* ReviewTableViewController.swift in Sources */,
+				318D67481C0562D500AC5218 /* AutoCompleteTextField.swift in Sources */,
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
 				018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */,
@@ -432,6 +447,7 @@
 				31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */,
 				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
+				318D674A1C056BB300AC5218 /* AutocompleteLocation.swift in Sources */,
 				017FC2421BD8A8000048254C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

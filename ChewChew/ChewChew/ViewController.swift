@@ -9,18 +9,15 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import GoogleMaps
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
-//    @IBOutlet weak var search: UISearchBar!
+    @IBOutlet weak var autocompleteTextfield: AutoCompleteTextField!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var placePicker: UIPickerView!
-    
-    var placePickerDataSource = ["Claremont", "Union Station"];
     
     var trainStation: String = ""
-
     var distanceRadius: Double = 1.5;
     
     var locationsList: [Location] = [Location]()
@@ -40,6 +37,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
+    
+    
     // GETTER FUNCTIONS //
     
     // Get the user's train station
@@ -52,50 +51,120 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return distanceRadius
     }
     
+    
+    
     // OVERRIDE FUNCTIONS //
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.placePicker.dataSource = self;
-        self.placePicker.delegate = self;
+        // Autocomplete search box
+        configureTextField()
+        handleTextFieldInterfaces()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-    // DISABLED SEARCH BAR TO IMPLEMENT PLACE PICKER
     
-//    // Dismiss the keyboard when user taps outside of search bar
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
-//        view.endEditing(true)
-//        super.touchesBegan(touches, withEvent: event)
-//    }
+    // AUTOCOMPLETE METHODS //
     
-    // UIPICKERVIEW DELEGATE METHODS //
+    private var connection:NSURLConnection?
+    private var responseData:NSMutableData?
     
-    // Number of columns
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    private let googleMapsKey = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+    private let baseURLString = "https://maps.googleapis.com/maps/api/place/autocomplete/json"
+    
+    private func configureTextField(){
+        autocompleteTextfield.autoCompleteTextColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0)
+        autocompleteTextfield.autoCompleteTextFont = UIFont(name: "HelveticaNeue-Light", size: 12.0)
+        autocompleteTextfield.autoCompleteCellHeight = 35.0
+        autocompleteTextfield.maximumAutoCompleteCount = 20
+        autocompleteTextfield.hidesWhenSelected = true
+        autocompleteTextfield.hidesWhenEmpty = true
+        autocompleteTextfield.enableAttributedText = true
+        var attributes = [String:AnyObject]()
+        attributes[NSForegroundColorAttributeName] = UIColor.blackColor()
+        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
+        autocompleteTextfield.autoCompleteAttributes = attributes
     }
     
-    // Number of rows
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return placePickerDataSource.count;
+    private func handleTextFieldInterfaces(){
+        autocompleteTextfield.onTextChange = {[weak self] text in
+            if !text.isEmpty{
+                if self!.connection != nil{
+                    self!.connection!.cancel()
+                    self!.connection = nil
+                }
+                let urlString = "\(self!.baseURLString)?key=\(self!.googleMapsKey)&input=\(text)&types=geocode"
+                let url = NSURL(string: (urlString as NSString).stringByAddingPercentEscapesUsingEncoding(NSASCIIStringEncoding)!)
+                if url != nil{
+                    let urlRequest = NSURLRequest(URL: url!)
+                    self!.connection = NSURLConnection(request: urlRequest, delegate: self)
+                }
+            }
+        }
+        
+        // TO DO: ALLOW USER TO SELECT AUTOCOMPLETE SUGGESTION
+        
+//        autocompleteTextfield.onSelect = {[weak self] text, indexpath in
+//            AutocompleteLocation.geocodeAddressString(text, completion: { (placemark, error) -> Void in
+//                if let coordinate = placemark?.location?.coordinate{
+//                    self!.addAnnotation(coordinate, address: text)
+//                    self!.mapView.setCenterCoordinate(coordinate, zoomLevel: 12, animated: true)
+//                }
+//            })
+//        }
+    }
+
+    //MARK: NSURLConnectionDelegate
+    func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
+        responseData = NSMutableData()
     }
     
-    // Data for a specific row and specific column
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return placePickerDataSource[row]
+    func connection(connection: NSURLConnection, didReceiveData data: NSData) {
+        responseData?.appendData(data)
     }
     
-    // detecting selected row
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        trainStation = placePickerDataSource[row]
+    func connectionDidFinishLoading(connection: NSURLConnection) {
+        if let data = responseData{
+            
+            do{
+                let result = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                
+                if let status = result["status"] as? String{
+                    if status == "OK"{
+                        if let predictions = result["predictions"] as? NSArray{
+                            var locations = [String]()
+                            for dict in predictions as! [NSDictionary]{
+                                var nameOfResult = dict["description"] as! String
+                                
+                                // restrict results to train stations
+                                if nameOfResult.rangeOfString("Station") != nil {
+                                    locations.append(dict["description"] as! String)
+                                }
+                            }
+                            self.autocompleteTextfield.autoCompleteStrings = locations
+                            return
+                        }
+                    }
+                }
+                self.autocompleteTextfield.autoCompleteStrings = nil
+            }
+            catch let error as NSError{
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
+    
+    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
+        print("Error: \(error.localizedDescription)")
+    }
+
+    
     
     // SEGUE METHODS //
     
