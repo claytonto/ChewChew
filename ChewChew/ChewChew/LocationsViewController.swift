@@ -8,15 +8,23 @@
 
 import UIKit
 
+/*
+    List page
+        Show the list of restaurants corresponding with user's input
+*/
 class LocationsViewController: UITableViewController {
     
     // Data from home page
     var toPass:[Location]!
-    var station: String!
     var stationCoordinates: [Double]!
 
     // List of retrieved restaurants (initially empty)
     var locations:[Location] = ViewController().locationsList
+    
+    // Label tag values
+    let NAME_TAG = 100
+    let PRICE_TAG = 101
+    let RATING_TAG = 102
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +43,6 @@ class LocationsViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -56,17 +63,17 @@ class LocationsViewController: UITableViewController {
         let location = locations[indexPath.row] as Location
         
         // Show location name
-        if let nameLabel = cell.viewWithTag(100) as? UILabel {
+        if let nameLabel = cell.viewWithTag(NAME_TAG) as? UILabel {
             nameLabel.text = location.name
         }
         
         // Show location price level
-        if let priceLabel = cell.viewWithTag(101) as? UILabel {
+        if let priceLabel = cell.viewWithTag(PRICE_TAG) as? UILabel {
             priceLabel.text = location.price
         }
         
         // Show ratings as a row of stars
-        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+        if let ratingImageView = cell.viewWithTag(RATING_TAG) as? UIImageView {
             let exactRating = Double(location.rating)   // string to double
             let rating: Int = Int(round(exactRating!))  // double to integer
             
@@ -123,18 +130,18 @@ class LocationsViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Pass data from list page to map page
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "ShowMap"){
             let nextPage = segue.destinationViewController as! MapViewController
-            // getting the selected row
+           
+            // Get the selected row
             let indexPath = self.tableView.indexPathForSelectedRow!
             let clickedLocation =  locations[indexPath.row]
-            // passing the station and location data from selected row
-            nextPage.locationCoordinates = clickedLocation.coordindates
+            
+            // Pass station and location data from selected row
+            nextPage.locationCoordinates = clickedLocation.coordinates
             nextPage.stationCoordinates = stationCoordinates
-            nextPage.locationName = clickedLocation.name
-            nextPage.stationName = station
         }
     }
 
