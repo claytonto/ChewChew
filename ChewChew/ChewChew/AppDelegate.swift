@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        // instantiate Google Maps service
+        // Instantiate Google Maps service
         GMSServices.provideAPIKey(googleMapsApiKey)
         
         return true

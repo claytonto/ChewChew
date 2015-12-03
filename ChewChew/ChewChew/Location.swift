@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 
+/*
+    Location represents each restaurant shown in the list
+*/
 class Location {
     var name: String
     var price: String
     var rating: String
-    var coordindates: [Double]
+    var coordinates: [Double]
     var placeID: String
 
     
@@ -21,8 +24,8 @@ class Location {
         self.name   = name
         self.price  = price
         self.rating = rating
-        self.coordindates = location
+        self.coordinates = location
         self.placeID = placeID
-    }
     
+    }
 }

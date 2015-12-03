@@ -10,14 +10,16 @@
 		010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8831BAB2E890025FC18 /* AppDelegate.swift */; };
 		010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8851BAB2E890025FC18 /* ViewController.swift */; };
 		010EE8891BAB2E890025FC18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010EE8871BAB2E890025FC18 /* Main.storyboard */; };
-		010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88A1BAB2E890025FC18 /* Images.xcassets */; };
 		010EE88E1BAB2E890025FC18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */; };
 		010EE89A1BAB2E890025FC18 /* ChewChewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE8991BAB2E890025FC18 /* ChewChewTests.swift */; };
 		017FC2421BD8A8000048254C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FC2411BD8A8000048254C /* MapViewController.swift */; };
 		018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186948F1BE17FCE00048479 /* LocationsViewController.swift */; };
+		31133DD01BFD729D0081DD1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31133DCF1BFD729D0081DD1E /* Images.xcassets */; };
+		31133DD21BFD80E30081DD1E /* launchFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 31133DD11BFD80E30081DD1E /* launchFile.png */; };
+		31133DD41BFD82010081DD1E /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 31133DD31BFD82010081DD1E /* name.png */; };
 		3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */; };
-		31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */; };
-		31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */; };
+		318D67481C0562D500AC5218 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */; };
+		31B50FC41BC8A0CF009B4BB8 /* CoordinateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B50FC31BC8A0CF009B4BB8 /* CoordinateFinder.swift */; };
 		31B50FD51BC8E054009B4BB8 /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC61BC8E054009B4BB8 /* 1Stars.png */; };
 		31B50FD61BC8E054009B4BB8 /* 1Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC71BC8E054009B4BB8 /* 1Stars@2x.png */; };
 		31B50FD71BC8E054009B4BB8 /* 1Stars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31B50FC81BC8E054009B4BB8 /* 1Stars@3x.png */; };
@@ -61,17 +63,19 @@
 		010EE8831BAB2E890025FC18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		010EE8851BAB2E890025FC18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		010EE8881BAB2E890025FC18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		010EE88A1BAB2E890025FC18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		010EE88D1BAB2E890025FC18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		010EE8931BAB2E890025FC18 /* ChewChewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChewChewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		010EE8981BAB2E890025FC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010EE8991BAB2E890025FC18 /* ChewChewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChewChewTests.swift; sourceTree = "<group>"; };
 		017FC2411BD8A8000048254C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0186948F1BE17FCE00048479 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		31133DCF1BFD729D0081DD1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		31133DD11BFD80E30081DD1E /* launchFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchFile.png; sourceTree = "<group>"; };
+		31133DD31BFD82010081DD1E /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChewChew-Bridging-Header.h"; sourceTree = "<group>"; };
 		3173E38F1BBDA6B8004FD43E /* LocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
-		31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationInfo.swift; sourceTree = "<group>"; };
-		31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationFinder.swift; sourceTree = "<group>"; };
+		318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		31B50FC31BC8A0CF009B4BB8 /* CoordinateFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateFinder.swift; sourceTree = "<group>"; };
 		31B50FC61BC8E054009B4BB8 /* 1Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Stars.png; sourceTree = "<group>"; };
 		31B50FC71BC8E054009B4BB8 /* 1Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Stars@2x.png"; sourceTree = "<group>"; };
 		31B50FC81BC8E054009B4BB8 /* 1Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Stars@3x.png"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		010EE8751BAB2E890025FC18 = {
 			isa = PBXGroup;
 			children = (
+				318D67461C0562D500AC5218 /* AutoCompleteTextField */,
 				010EE8801BAB2E890025FC18 /* ChewChew */,
 				010EE8961BAB2E890025FC18 /* ChewChewTests */,
 				010EE87F1BAB2E890025FC18 /* Products */,
@@ -149,13 +154,12 @@
 				010EE8871BAB2E890025FC18 /* Main.storyboard */,
 				31C796851BB8D05800A8FB15 /* Location.swift */,
 				A236E3E21BF4DE8800366024 /* Review.swift */,
-				31B50FC11BC89F8A009B4BB8 /* TrainStationInfo.swift */,
-				31B50FC31BC8A0CF009B4BB8 /* TrainStationFinder.swift */,
-				010EE88A1BAB2E890025FC18 /* Images.xcassets */,
+				31B50FC31BC8A0CF009B4BB8 /* CoordinateFinder.swift */,
 				31B50FC51BC8E054009B4BB8 /* Images */,
 				010EE88C1BAB2E890025FC18 /* LaunchScreen.xib */,
 				010EE8811BAB2E890025FC18 /* Supporting Files */,
 				315C53DA1BB2468E00C5EEED /* ChewChew-Bridging-Header.h */,
+				31133DCF1BFD729D0081DD1E /* Images.xcassets */,
 			);
 			path = ChewChew;
 			sourceTree = "<group>";
@@ -196,9 +200,19 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		318D67461C0562D500AC5218 /* AutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				318D67471C0562D500AC5218 /* AutoCompleteTextField.swift */,
+			);
+			path = AutoCompleteTextField;
+			sourceTree = "<group>";
+		};
 		31B50FC51BC8E054009B4BB8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				31133DD31BFD82010081DD1E /* name.png */,
+				31133DD11BFD80E30081DD1E /* launchFile.png */,
 				31B50FE41BC9B059009B4BB8 /* powered_by_google_on_non_white.png */,
 				31B50FE51BC9B059009B4BB8 /* powered_by_google_on_non_white@2x.png */,
 				31B50FE61BC9B059009B4BB8 /* powered_by_google_on_non_white@3x.png */,
@@ -289,11 +303,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = ChewChew;
 				TargetAttributes = {
 					010EE87D1BAB2E890025FC18 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = NJHH4J7Z9S;
 					};
 					010EE8921BAB2E890025FC18 = {
 						CreatedOnToolsVersion = 6.4;
@@ -325,9 +340,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31133DD41BFD82010081DD1E /* name.png in Resources */,
 				31B50FDA1BC8E054009B4BB8 /* 2Stars@3x.png in Resources */,
 				31B50FEC1BC9B059009B4BB8 /* powered_by_google_on_non_white@3x.png in Resources */,
 				31B50FE31BC8E054009B4BB8 /* 5Stars@3x.png in Resources */,
+				31133DD01BFD729D0081DD1E /* Images.xcassets in Resources */,
 				31B50FE21BC8E054009B4BB8 /* 5Stars@2x.png in Resources */,
 				31B50FD61BC8E054009B4BB8 /* 1Stars@2x.png in Resources */,
 				31B50FEB1BC9B059009B4BB8 /* powered_by_google_on_non_white@2x.png in Resources */,
@@ -340,10 +357,10 @@
 				31B50FDF1BC8E054009B4BB8 /* 4Stars@2x.png in Resources */,
 				31B50FDD1BC8E054009B4BB8 /* 3Stars@3x.png in Resources */,
 				31B50FE01BC8E054009B4BB8 /* 4Stars@3x.png in Resources */,
-				010EE88B1BAB2E890025FC18 /* Images.xcassets in Resources */,
 				31B50FD51BC8E054009B4BB8 /* 1Stars.png in Resources */,
 				31B50FD71BC8E054009B4BB8 /* 1Stars@3x.png in Resources */,
 				31B50FDE1BC8E054009B4BB8 /* 4Stars.png in Resources */,
+				31133DD21BFD80E30081DD1E /* launchFile.png in Resources */,
 				31B50FDC1BC8E054009B4BB8 /* 3Stars@2x.png in Resources */,
 				31B50FEA1BC9B059009B4BB8 /* powered_by_google_on_non_white.png in Resources */,
 				31B50FEF1BC9B059009B4BB8 /* powered_by_google_on_white@3x.png in Resources */,
@@ -416,12 +433,12 @@
 			files = (
 				3173E3901BBDA6B8004FD43E /* LocationFinder.swift in Sources */,
 				A236E3E11BF4AF4E00366024 /* ReviewTableViewController.swift in Sources */,
+				318D67481C0562D500AC5218 /* AutoCompleteTextField.swift in Sources */,
 				010EE8861BAB2E890025FC18 /* ViewController.swift in Sources */,
 				010EE8841BAB2E890025FC18 /* AppDelegate.swift in Sources */,
 				018694901BE17FCE00048479 /* LocationsViewController.swift in Sources */,
 				A236E3E31BF4DE8800366024 /* Review.swift in Sources */,
-				31B50FC41BC8A0CF009B4BB8 /* TrainStationFinder.swift in Sources */,
-				31B50FC21BC89F8A009B4BB8 /* TrainStationInfo.swift in Sources */,
+				31B50FC41BC8A0CF009B4BB8 /* CoordinateFinder.swift in Sources */,
 				31C796861BB8D05800A8FB15 /* Location.swift in Sources */,
 				017FC2421BD8A8000048254C /* MapViewController.swift in Sources */,
 			);
@@ -485,7 +502,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -530,6 +549,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -553,7 +573,10 @@
 			baseConfigurationReference = 9B2042054268C210BF288498 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChewChew/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -595,7 +618,9 @@
 					"\"SystemConfiguration\"",
 					"\"-ObjC\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChewChew.ChewChew.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChewChew/ChewChew-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -606,7 +631,10 @@
 			baseConfigurationReference = C1201C4EEF07045C63973600 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChewChew/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -648,7 +676,9 @@
 					"\"SystemConfiguration\"",
 					"\"-ObjC\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChewChew.ChewChew.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChewChew/ChewChew-Bridging-Header.h";
 			};
 			name = Release;
@@ -667,6 +697,7 @@
 				);
 				INFOPLIST_FILE = ChewChewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ChewChew.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChewChew.app/ChewChew";
 			};
@@ -682,6 +713,7 @@
 				);
 				INFOPLIST_FILE = ChewChewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ChewChew.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChewChew.app/ChewChew";
 			};
