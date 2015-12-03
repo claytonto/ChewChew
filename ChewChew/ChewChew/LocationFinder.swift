@@ -63,45 +63,14 @@ class LocationFinder {
             locationData.append(lat)
             locationData.append(long)
             
-            
-            // Create the URL request to Google Places for REVIEW
+            // Create placeID used in generate review
             let placeID:String = result["place_id"].stringValue
-            let reviews:[Review] = getReviews(placeID)
             
             // Populate list
-            let location = Location(name: resultName, price: resultPrice, rating: resultRating, location: locationData, reviews: reviews)
+            let location = Location(name: resultName, price: resultPrice, rating: resultRating,
+                location: locationData, placeID: placeID)
             self.locations.append(location)
         }
-    }
-    
-    // getReview function
-    func getReviews(placeID: String) -> [Review]{
-        // Create the URL request to Google Places for REVIEW
-        let urlReview: NSString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
-        let urlReviewString: NSString = urlReview.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        let searchUrlReview: NSURL = NSURL(string: urlReviewString as String)!
-        
-        // Retrieve list of places (JSON)
-        let jsonData = NSData(contentsOfURL: searchUrlReview)
-        let json = JSON(data: jsonData!)
-        
-        print(json)
-        
-        var reviews: [Review] = []
-
-        // Parse JSON
-        for result in json["result"]["reviews"].arrayValue {
-            // Location name
-            let author_name:String = result["author_name"].stringValue
-            let rating:String = result["rating"].stringValue
-            let text:String = result["text"].stringValue
-            
-            //Create a review list for each location
-            let review: Review = Review(author_name: author_name, rating: rating, review: text)
-            reviews.append(review)
-        }
-        
-        return reviews
     }
 
 }

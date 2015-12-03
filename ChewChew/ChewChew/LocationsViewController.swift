@@ -18,6 +18,9 @@ class LocationsViewController: UITableViewController {
     // List of retrieved restaurants (initially empty)
     var locations:[Location] = ViewController().locationsList
     
+    // Keep tracking on what row are we working on
+    var indexPath:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set color of bottom bar
@@ -75,6 +78,8 @@ class LocationsViewController: UITableViewController {
                 ratingImageView.image = self.imageForRating(rating)
             }
         }
+        
+        self.indexPath = indexPath.row
         
         return cell
     }
@@ -135,6 +140,15 @@ class LocationsViewController: UITableViewController {
             nextPage.stationCoordinates = stationCoordinates
             nextPage.locationName = clickedLocation.name
             nextPage.stationName = station
+        }
+        if(segue.identifier == "ShowReview"){
+            let reviewPage = segue.destinationViewController as! ReviewTableViewController
+            // getting the selected review
+            let position:CGPoint = (sender?.convertPoint(CGPointZero, toView: self.tableView))!
+            let indexPath = self.tableView.indexPathForRowAtPoint(position)
+            let clickedLocation =  locations[indexPath!.row]
+            // passing the station and location data from selected row
+            reviewPage.placeID = clickedLocation.placeID
         }
     }
 

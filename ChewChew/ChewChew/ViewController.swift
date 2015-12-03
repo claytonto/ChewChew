@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     var distanceRadius: Double = 1.5;
     
     var locationsList: [Location] = [Location]()
-    var reviewList: [Review] = [Review]()
     
     @IBOutlet weak var button: UIButton!
     
