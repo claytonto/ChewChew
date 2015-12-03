@@ -85,55 +85,14 @@ class LocationFinder {
             locationData.append(latitude)
             locationData.append(longitude)
             
+            // Create placeID used in generate review
+            let placeID:String = result["place_id"].stringValue
             
-            // Create the URL request to Google Places for REVIEW
-            
-            // TO DO: RE-ENABLE REVIEWS
-            // TEMPORARILY DISABLED FOR TESTING PURPOSES
-            // SO THAT API QUOTA DOES NOT HIT LIMIT
-            
-            //let placeID:String = result["place_id"].stringValue
-            //let reviews:[Review] = getReviews(placeID)
-            
-            // TO DO: GET RID OF EMPTY REVIEWS LIST
-            // TEMPORARILY USED SO THAT LOCATION CLASS CAN BE USED
-            // WHILE REVIEW FETCHING IS DISABLED
-            let reviews:[Review] = [Review]()
-            
-            // Populate list of locations with restaurants
-            let location = Location(name: resultName, price: resultPrice, rating: resultRating, coordinates: locationData, reviews: reviews)
+            // Populate list
+            let location = Location(name: resultName, price: resultPrice, rating: resultRating,
+                location: locationData, placeID: placeID)
             self.locations.append(location)
         }
-    }
-    
-    // getReview function
-    func getReviews(placeID: String) -> [Review]{
-        // Create the URL request to Google Places for REVIEW
-        let urlReview: NSString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
-        let urlReviewString: NSString = urlReview.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        let searchUrlReview: NSURL = NSURL(string: urlReviewString as String)!
-        
-        // Retrieve list of places (JSON)
-        let jsonData = NSData(contentsOfURL: searchUrlReview)
-        let json = JSON(data: jsonData!)
-        
-        //print(json)
-        
-        var reviews: [Review] = []
-
-        // Parse JSON
-        for result in json["result"]["reviews"].arrayValue {
-            // Location name
-            let author_name:String = result["author_name"].stringValue
-            let rating:String = result["rating"].stringValue
-            let text:String = result["text"].stringValue
-            
-            //Create a review list for each location
-            let review: Review = Review(author_name: author_name, rating: rating, review: text)
-            reviews.append(review)
-        }
-        
-        return reviews
     }
 
 }

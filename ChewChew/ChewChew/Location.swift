@@ -17,14 +17,15 @@ class Location {
     var price: String
     var rating: String
     var coordinates: [Double]
-    var reviews: [Review]
+    var placeID: String
 
-    init(name: String, price: String, rating: String, coordinates: [Double], reviews: [Review]) {
-        self.name = name
-        self.price = price
-        self.rating = rating
-        self.coordinates = coordinates
-        self.reviews = reviews
-    }
     
+    init(name: String, price: String, rating: String, location: [Double], placeID: String) {
+        self.name   = name
+        self.price  = price
+        self.rating = rating
+        self.coordinates = location
+        self.placeID = placeID
+    
+    }
 }

@@ -7,24 +7,49 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ReviewTableViewController: UITableViewController {
     
     // Data from home page
-    var toPass:[Review]!
-    var station: String!
-    var stationCoordinates: [Double]!
+    var placeID:String   = ""
+    var reviews:[Review] = []
     
-    // List of retrieved reviews (initially empty)
-    var reviews:[Review] = ViewController().reviewList
-    
+    // getReview function
+    func getReviews(placeID: String) -> [Review]{
+        // Create the URL request to Google Places for REVIEW
+        let urlReview: NSString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
+        let urlReviewString: NSString = urlReview.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let searchUrlReview: NSURL = NSURL(string: urlReviewString as String)!
+        
+        // Retrieve list of places (JSON)
+        let jsonData = NSData(contentsOfURL: searchUrlReview)
+        let json = JSON(data: jsonData!)
+        
+        var reviews: [Review] = []
+        
+        // Parse JSON
+        for result in json["result"]["reviews"].arrayValue {
+            // reviews data
+            let author_name:String = result["author_name"].stringValue
+            let rating:String = result["rating"].stringValue
+            let text:String = result["text"].stringValue
+            
+            //Create a review list for each location
+            let review: Review = Review(author_name: author_name, rating: rating, review: text)
+            reviews.append(review)
+        }
+        
+        return reviews
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set color of bottom bar
         self.navigationController!.toolbar.barTintColor = UIColor.redColor()
         
         // Retrieve data from home page
-        // reviews = toPass
+        reviews = getReviews(placeID)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,24 +66,49 @@ class ReviewTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // show all reviews
         return reviews.count
     }
 
-    /*
+    // Show review information on corresponding cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ReviewBox", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let review = reviews[indexPath.row] as Review
 
+        // Show location name
+        if let authorName = cell.viewWithTag(100) as? UILabel {
+            authorName.text = review.author_name
+        }
+        
+        // Show content of a review
+        if let comment = cell.viewWithTag(101) as? UILabel {
+            comment.text = review.review
+        }
+        
+        // Show ratings as a row of stars
+        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+            let exactRating = Double(review.rating)   // string to double
+            let rating: Int = Int(round(exactRating!))  // double to integer
+            
+            // Do not show ratings for places that don't have any
+            if (rating != 0) {
+                ratingImageView.image = self.imageForRating(rating)
+            }
+        }
+        
         return cell
     }
-    */
+    
+    // Retrieve image to match rating
+    func imageForRating(rating:Int) -> UIImage? {
+        let imageName = "\(rating)Stars"
+        return UIImage(named: imageName)
+    }
 
     /*
     // Override to support conditional editing of the table view.

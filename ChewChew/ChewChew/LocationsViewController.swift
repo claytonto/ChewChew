@@ -143,6 +143,15 @@ class LocationsViewController: UITableViewController {
             nextPage.locationCoordinates = clickedLocation.coordinates
             nextPage.stationCoordinates = stationCoordinates
         }
+        if(segue.identifier == "ShowReview"){
+            let reviewPage = segue.destinationViewController as! ReviewTableViewController
+            // getting the selected review
+            let position:CGPoint = (sender?.convertPoint(CGPointZero, toView: self.tableView))!
+            let indexPath = self.tableView.indexPathForRowAtPoint(position)
+            let clickedLocation =  locations[indexPath!.row]
+            // passing the station and location data from selected row
+            reviewPage.placeID = clickedLocation.placeID
+        }
     }
 
 

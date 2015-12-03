@@ -31,7 +31,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
     // Results based on user input
     var locationsList: [Location] = [Location]()
-    var reviewList: [Review] = [Review]()
     
     // Conversion values
     let METERS_PER_MILE: Double = 1609.34
