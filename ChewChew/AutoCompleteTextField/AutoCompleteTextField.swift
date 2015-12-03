@@ -87,9 +87,9 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
     
     private func setupAutocompleteTable(view:UIView){
         let screenSize = UIScreen.mainScreen().bounds.size
-        // offset x location by 100
+        // offset x location by 150
         // offset width (did not multiply by 2 like the original file)
-        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 100, self.frame.origin.y + CGRectGetHeight(self.frame), screenSize.width - (self.frame.origin.x), 30.0))
+        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 150, self.frame.origin.y + CGRectGetHeight(self.frame), screenSize.width - 100, 30.0))
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = autoCompleteCellHeight

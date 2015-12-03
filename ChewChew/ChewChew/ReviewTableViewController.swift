@@ -45,8 +45,10 @@ class ReviewTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Set color of bottom bar
-        self.navigationController!.toolbar.barTintColor = UIColor.redColor()
+        let barColor = UIColor(red: 1, green: 73/255, blue: 80/255, alpha: 1)
+        self.navigationController!.toolbar.barTintColor = barColor
         
         // Retrieve data from home page
         reviews = getReviews(placeID)

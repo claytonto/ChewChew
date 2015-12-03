@@ -91,7 +91,8 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         var attributes = [String:AnyObject]()
         
         // Make highlight red and bold-faced
-        attributes[NSForegroundColorAttributeName] = UIColor.redColor()
+        let fontColor = UIColor(red: 1, green: 73/255, blue: 80/255, alpha: 1)
+        attributes[NSForegroundColorAttributeName] = fontColor
         attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
         
         autocompleteTextfield.autoCompleteAttributes = attributes
