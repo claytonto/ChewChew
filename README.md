@@ -1,7 +1,7 @@
 #ChewChew
 An app that locates places to eat near train stations!
 
-## Dependencies
+##### Dependencies
 SwiftyJSON
 Google Places API
 Google Geocoder API
