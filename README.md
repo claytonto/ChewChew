@@ -1,5 +1,5 @@
 #ChewChew
-An app that locates places to eat near train stations!
+A Swift app that finds and directs you to places to eat near train stations!
 
 ##### Dependencies
 SwiftyJSON
