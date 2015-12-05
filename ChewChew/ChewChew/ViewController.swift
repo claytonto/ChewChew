@@ -22,6 +22,9 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    // Background color
+    let gradientLayer = CAGradientLayer()
+    
     // User input
     var stationID: String = ""
     var distanceRadius: Double = 1.5
@@ -62,6 +65,17 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set up background gradient
+        gradientLayer.frame = self.view.bounds
+        
+        let color1 = UIColor(red: 232/255, green: 83/255, blue: 69/255, alpha: 1.0).CGColor as CGColorRef
+        let color2 = UIColor(red: 206/255, green: 70/255, blue: 53/255, alpha: 1.0).CGColor as CGColorRef
+        gradientLayer.colors = [color1, color2]
+        
+        gradientLayer.locations = [0.0, 1.0]
+        
+        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
+        
         // Set up autocomplete text box
         configureTextField()
         handleTextFieldInterfaces()
@@ -90,10 +104,9 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         var attributes = [String:AnyObject]()
         
-        // Make highlight red and bold-faced
+        // Make matching strings red
         let fontColor = UIColor(red: 1, green: 73/255, blue: 80/255, alpha: 1)
         attributes[NSForegroundColorAttributeName] = fontColor
-        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
         
         autocompleteTextfield.autoCompleteAttributes = attributes
     }
@@ -248,4 +261,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
 
 }
+
+
 

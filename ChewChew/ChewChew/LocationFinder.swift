@@ -37,7 +37,7 @@ class LocationFinder {
         // Create the URL request to Google Places
         let baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
         let apiKey = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
-        let url: NSString = "\(baseURL)location=\(self.latitude),\(self.longitude)&radius=\(self.distance)&types=food&key=\(apiKey)"
+        let url: NSString = "\(baseURL)location=\(self.latitude),\(self.longitude)&rankBy=distance&radius=\(self.distance)&types=food&key=\(apiKey)"
         
         // Format URL for JSON request
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
