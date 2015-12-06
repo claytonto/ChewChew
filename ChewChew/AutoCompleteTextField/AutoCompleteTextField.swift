@@ -89,7 +89,7 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
         let screenSize = UIScreen.mainScreen().bounds.size
         // offset x location by 150
         // offset width (did not multiply by 2 like the original file)
-        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 140, self.frame.origin.y + CGRectGetHeight(self.frame), screenSize.width - 130, 30.0))
+        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 130, self.frame.origin.y + CGRectGetHeight(self.frame), screenSize.width - 142, 30.0))
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = autoCompleteCellHeight
@@ -97,7 +97,7 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
         view.addSubview(tableView)
         autoCompleteTableView = tableView
         
-        autoCompleteTableHeight = 100.0
+        autoCompleteTableHeight = 85.0
     }
     
     private func redrawTable(){
@@ -139,6 +139,10 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             tableView.hidden = self.hidesWhenSelected
         })
+    }
+    
+    public func hideSuggestions() {
+        autoCompleteTableView?.hidden = true
     }
     
     public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

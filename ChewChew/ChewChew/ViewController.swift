@@ -20,7 +20,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var autocompleteTextfield: AutoCompleteTextField!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     // Background color
     let gradientLayer = CAGradientLayer()
@@ -65,6 +65,12 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set up button so that it has rounded corners
+        searchButton.layer.cornerRadius = 10;
+        
+        // Set up slider so that the right side is orange
+        slider.maximumTrackTintColor = UIColor.orangeColor()
+        
         // Set up background gradient
         gradientLayer.frame = self.view.bounds
         
@@ -84,8 +90,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
     
     
     
