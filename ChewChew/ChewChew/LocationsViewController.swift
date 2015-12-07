@@ -26,12 +26,23 @@ class LocationsViewController: UITableViewController {
     let PRICE_TAG = 101
     let RATING_TAG = 102
     
+    // Red color values
+    let RED_VALUE: CGFloat = 1
+    let GREEN_VALUE: CGFloat = 73/255
+    let BLUE_VALUE: CGFloat = 80/255
+    
+    // Row height
+    let ROW_HEIGHT: CGFloat = 100
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set color of bottom bar
-        let barColor = UIColor(red: 1, green: 73/255, blue: 80/255, alpha: 1)
+        let barColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
         self.navigationController!.toolbar.barTintColor = barColor
+        
+        // Set height of each cell
+        self.tableView.rowHeight = ROW_HEIGHT;
         
         // Retrieve data from home page
         locations = toPass
@@ -128,7 +139,6 @@ class LocationsViewController: UITableViewController {
         return true
     }
     */
-
     
     // MARK: - Navigation
 
@@ -155,6 +165,4 @@ class LocationsViewController: UITableViewController {
             reviewPage.placeID = clickedLocation.placeID
         }
     }
-
-
 }

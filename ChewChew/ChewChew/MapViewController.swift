@@ -39,7 +39,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // Google Maps API Key
     let apiKey: String = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
     
+    // Red color values
+    let RED_VALUE: CGFloat = 1
+    let GREEN_VALUE: CGFloat = 73/255
+    let BLUE_VALUE: CGFloat = 80/255
+    
+    // Corner radius for button
+    let CORNER_RADIUS: CGFloat = 10
+    
     override func viewDidLoad() {
+        // Set color of back button
+        let redColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = redColor
+        
         // Make positions for the station and restaurant
         stationPosition = CLLocationCoordinate2DMake(stationCoordinates[0], stationCoordinates[1])
         locationPosition = CLLocationCoordinate2DMake(locationCoordinates[0], locationCoordinates[1])
@@ -61,18 +73,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // Request access to the user's location
         locationManager.delegate = self
         
+        // Set up button so that it has rounded corners
+        trackButton.layer.cornerRadius = CORNER_RADIUS;
+        
         // Add "Start/Stop Walking" button
         Map.addSubview(trackButton)
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    
-    
     
     // MAP METHODS //
     
@@ -82,8 +92,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let locationMarker = GMSMarker(position: locationPosition)
         let stationMarker = GMSMarker(position : stationPosition)
         
+        // Set title
         locationMarker.title = locationAddress
         stationMarker.title = stationAddress
+        
+        // Set color
+        let redColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
+        locationMarker.icon = GMSMarker.markerImageWithColor(redColor)
+        stationMarker.icon = GMSMarker.markerImageWithColor(redColor)
         
         // Center map around station
         let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(stationCoordinates[0], longitude: stationCoordinates[1], zoom: 14.5)
@@ -153,11 +169,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         return path
     }
-    
-    
-    
-    
-    
+
     // LOCATION TRACKING METHODS //
     
     // Start tracking user's location
@@ -189,7 +201,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             trackLocation = true;
         }
     }
-
     
     /*
     // MARK: - Navigation

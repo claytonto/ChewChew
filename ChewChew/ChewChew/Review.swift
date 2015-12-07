@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
+/*
+    Review represents each review for a restaurant
+*/
 class Review {
     var author_name: String
     var rating: String
     var review: String
-    
     
     init(author_name: String, rating: String, review: String) {
         self.author_name = author_name
