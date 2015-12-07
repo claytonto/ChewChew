@@ -26,6 +26,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     let gradientLayer = CAGradientLayer()
     
     // User input
+    var stationName: String = ""
     var stationID: String = ""
     var distanceRadius: Double = 1.5
     
@@ -156,6 +157,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             // Update text to show selected station
             self!.autocompleteTextfield.text = text
+            self!.stationName = text
             
             // Dismiss keyboard after selecting station
             self!.view.endEditing(true)
@@ -250,7 +252,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             // Get coordinates of train station
             var trainCoordinates: [Double] = [Double]()
-
+            
             let coordinateFinder : CoordinateFinder = CoordinateFinder(placeID: stationID, coordinates: trainCoordinates)
             trainCoordinates = coordinateFinder.coordinates
                         
@@ -266,6 +268,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             secondPage.toPass = locationsList
             secondPage.stationCoordinates = trainCoordinates
+            secondPage.stationName = stationName
         }
     }
 }

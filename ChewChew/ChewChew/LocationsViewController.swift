@@ -17,9 +17,13 @@ class LocationsViewController: UITableViewController {
     // Data from home page
     var toPass:[Location]!
     var stationCoordinates: [Double]!
+    var stationName: String!
 
     // List of retrieved restaurants (initially empty)
     var locations:[Location] = ViewController().locationsList
+    
+    // Name of restaurant selected
+    var locationName: String!
     
     // Label tag values
     let NAME_TAG = 100
@@ -68,16 +72,21 @@ class LocationsViewController: UITableViewController {
         // Currently showing all possible location results
         return locations.count
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "               Sorted by distance (Ascending)"
+    }
 
     // Show location information on corresponding cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
-
+        
         let location = locations[indexPath.row] as Location
         
         // Show location name
         if let nameLabel = cell.viewWithTag(NAME_TAG) as? UILabel {
             nameLabel.text = location.name
+            locationName = location.name
         }
         
         // Show location price level
@@ -154,6 +163,8 @@ class LocationsViewController: UITableViewController {
             // Pass station and location data from selected row
             nextPage.locationCoordinates = clickedLocation.coordinates
             nextPage.stationCoordinates = stationCoordinates
+            nextPage.stationName = stationName
+            nextPage.locationName = locationName
         }
         if(segue.identifier == "ShowReview"){
             let reviewPage = segue.destinationViewController as! ReviewTableViewController

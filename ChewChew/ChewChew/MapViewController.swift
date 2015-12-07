@@ -20,6 +20,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet var Map: GMSMapView!
     @IBOutlet weak var trackButton: UIButton!
     
+    // Station and location name from previous pages
+    var stationName: String!
+    var locationName: String!
+    
     // Station and location coordinates from list page
     var stationCoordinates: [Double]!
     var locationCoordinates: [Double]!
@@ -87,19 +91,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // MAP METHODS //
     
     // Draw markers to indicate train station location and restaurant location
-    func placeMarkersOnMap (){
+    func placeMarkersOnMap(){
         // Create markers
         let locationMarker = GMSMarker(position: locationPosition)
         let stationMarker = GMSMarker(position : stationPosition)
-        
-        // Set title
-        locationMarker.title = locationAddress
-        stationMarker.title = stationAddress
         
         // Set color
         let redColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
         locationMarker.icon = GMSMarker.markerImageWithColor(redColor)
         stationMarker.icon = GMSMarker.markerImageWithColor(redColor)
+        
+        // Set title
+        locationMarker.title = locationName
+        stationMarker.title = stationName
+        
+        // Set label
+        locationMarker.snippet = locationAddress
+        stationMarker.snippet = stationAddress
         
         // Center map around station
         let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(stationCoordinates[0], longitude: stationCoordinates[1], zoom: 14.5)
