@@ -158,7 +158,10 @@ class LocationsViewController: UITableViewController {
            
             // Get the selected row
             let indexPath = self.tableView.indexPathForSelectedRow!
-            let clickedLocation =  locations[indexPath.row]
+            let clickedLocation = locations[indexPath.row]
+            
+            // Update location selected
+            locationName = clickedLocation.name
             
             // Pass station and location data from selected row
             nextPage.locationCoordinates = clickedLocation.coordinates
