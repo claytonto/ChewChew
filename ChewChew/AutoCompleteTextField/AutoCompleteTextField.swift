@@ -26,7 +26,7 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
     /// Used to set the height of cell for each suggestions
     public var autoCompleteCellHeight:CGFloat = 44.0
     /// The maximum visible suggestion
-    public var maximumAutoCompleteCount = 3
+    public var maximumAutoCompleteCount = 2
     /// Used to set your own preferred separator inset
     public var autoCompleteSeparatorInset = UIEdgeInsetsZero
     /// Shows autocomplete text with formatting
@@ -87,9 +87,7 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
     
     private func setupAutocompleteTable(view:UIView){
         let screenSize = UIScreen.mainScreen().bounds.size
-        // offset x location by 100
-        // offset width (did not multiply by 2 like the original file)
-        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 100, self.frame.origin.y + CGRectGetHeight(self.frame), screenSize.width - (self.frame.origin.x), 30.0))
+        let tableView = UITableView(frame: CGRectMake(self.frame.origin.x - 130, self.frame.origin.y + CGRectGetHeight(self.frame) - 61, screenSize.width - 142, 30.0))
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = autoCompleteCellHeight
@@ -97,7 +95,7 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
         view.addSubview(tableView)
         autoCompleteTableView = tableView
         
-        autoCompleteTableHeight = 100.0
+        autoCompleteTableHeight = 85.0
     }
     
     private func redrawTable(){
@@ -139,6 +137,10 @@ public class AutoCompleteTextField:UITextField, UITableViewDataSource, UITableVi
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             tableView.hidden = self.hidesWhenSelected
         })
+    }
+    
+    public func hideSuggestions() {
+        autoCompleteTableView?.hidden = true
     }
     
     public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

@@ -20,9 +20,13 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var autocompleteTextfield: AutoCompleteTextField!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    // Background color
+    let gradientLayer = CAGradientLayer()
     
     // User input
+    var stationName: String = ""
     var stationID: String = ""
     var distanceRadius: Double = 1.5
     
@@ -36,9 +40,21 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     let METERS_PER_MILE: Double = 1609.34
     let ONE_DIGIT: Double = 10.0
     
+    // Corner radius
+    let CORNER_RADIUS: CGFloat = 10
     
+    // Background gradient colors
+    let TOP_RED: CGFloat = 252/255
+    let TOP_GREEN: CGFloat = 103/255
+    let TOP_BLUE: CGFloat = 89/255
     
+    let MIDDLE_RED: CGFloat = 232/255
+    let MIDDLE_GREEN: CGFloat = 83/255
+    let MIDDLE_BLUE: CGFloat = 69/255
     
+    let BOTTOM_RED: CGFloat = 226/255
+    let BOTTOM_GREEN: CGFloat = 80/255
+    let BOTTOM_BLUE: CGFloat = 63/255
     
     // Update the slider label to match value
     @IBAction func sliderValueChanged(sender: UISlider) {
@@ -53,14 +69,27 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     // Search button actions already handled by segue
     @IBAction func searchPressed(sender: UIButton) {}
     
-    
-    
-    
-    
     // OVERRIDE FUNCTIONS //
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up button so that it has rounded corners
+        searchButton.layer.cornerRadius = CORNER_RADIUS;
+        
+        // Set up slider so that the right side is orange
+        slider.maximumTrackTintColor = UIColor.orangeColor()
+        
+        // Set up background gradient
+        gradientLayer.frame = self.view.bounds
+        
+        let topColor = UIColor(red: TOP_RED, green: TOP_GREEN, blue: TOP_BLUE, alpha: 1.0).CGColor as CGColorRef
+        let middleColor = UIColor(red: MIDDLE_RED, green: MIDDLE_GREEN, blue: MIDDLE_BLUE, alpha: 1.0).CGColor as CGColorRef
+        let bottomColor = UIColor(red: BOTTOM_RED, green: BOTTOM_GREEN, blue: BOTTOM_BLUE, alpha: 1.0).CGColor as CGColorRef
+        gradientLayer.colors = [topColor, middleColor, bottomColor]
+        gradientLayer.locations = [0.0, 0.5, 1.0]
+        
+        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
         
         // Set up autocomplete text box
         configureTextField()
@@ -71,10 +100,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
-    
-    
     // AUTOCOMPLETE METHODS //
     
     private var connection:NSURLConnection?
@@ -83,6 +108,11 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     private let googleMapsKey = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
     private let baseURLString = "https://maps.googleapis.com/maps/api/place/autocomplete/json"
     
+    // Red font color
+    private let FONT_RED: CGFloat = 1
+    private let FONT_GREEN: CGFloat = 73/255
+    private let FONT_BLUE: CGFloat = 80/255
+    
     // Highlight matching substrings between user input and autocomplete
     private func configureTextField(){
         // Enable formatting
@@ -90,9 +120,9 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         var attributes = [String:AnyObject]()
         
-        // Make highlight red and bold-faced
-        attributes[NSForegroundColorAttributeName] = UIColor.redColor()
-        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
+        // Make matching strings red
+        let fontColor = UIColor(red: FONT_RED, green: FONT_GREEN, blue: FONT_BLUE, alpha: 1)
+        attributes[NSForegroundColorAttributeName] = fontColor
         
         autocompleteTextfield.autoCompleteAttributes = attributes
     }
@@ -127,6 +157,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             // Update text to show selected station
             self!.autocompleteTextfield.text = text
+            self!.stationName = text
             
             // Dismiss keyboard after selecting station
             self!.view.endEditing(true)
@@ -185,10 +216,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     func connection(connection: NSURLConnection, didFailWithError error: NSError) {
         print("Error: \(error.localizedDescription)")
     }
-
-    
-    
-    
     
     // SEGUE METHODS //
     
@@ -198,11 +225,12 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         if identifier == "populateTableWithLocations" {
             // Train station not specified
             if (autocompleteTextfield.text!.isEmpty) {
-                let alert = UIAlertView()
-                alert.title = "Train Station Not Specified"
-                alert.message = "Please enter a valid train station"
-                alert.addButtonWithTitle("Close")
-                alert.show()
+                let alert = UIAlertController(title: "Train Station Not Specified", message: "Please enter a valid train station", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.view.tintColor = UIColor.grayColor()
+                
+                alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
                 
                 // Need to reset distance or else next valid result
                 // will send a request with invalid distance in meters
@@ -224,7 +252,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             // Get coordinates of train station
             var trainCoordinates: [Double] = [Double]()
-
+            
             let coordinateFinder : CoordinateFinder = CoordinateFinder(placeID: stationID, coordinates: trainCoordinates)
             trainCoordinates = coordinateFinder.coordinates
                         
@@ -240,11 +268,10 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             
             secondPage.toPass = locationsList
             secondPage.stationCoordinates = trainCoordinates
+            secondPage.stationName = stationName
         }
     }
-    
-
-    
-
 }
+
+
 

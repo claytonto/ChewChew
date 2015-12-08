@@ -37,7 +37,7 @@ class LocationFinder {
         // Create the URL request to Google Places
         let baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
         let apiKey = "AIzaSyDEVGwrwo767rgEQOfe_FcHR-_QYr9pOc8"
-        let url: NSString = "\(baseURL)location=\(self.latitude),\(self.longitude)&radius=\(self.distance)&types=food&key=\(apiKey)"
+        let url: NSString = "\(baseURL)location=\(self.latitude),\(self.longitude)&rankBy=distance&radius=\(self.distance)&types=food&key=\(apiKey)"
         
         // Format URL for JSON request
         let urlString: NSString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
@@ -46,7 +46,7 @@ class LocationFinder {
         // Retrieve list of places
         let jsonData = NSData(contentsOfURL: searchUrl)
         let json = JSON(data: jsonData!)
-        
+                        
         // Create list of locations based on retrieved information
         convertResults(json)
     }
@@ -62,13 +62,13 @@ class LocationFinder {
             
             // Show price levels as dollar amount
             if (resultPrice == "1") {
-                resultPrice = "$"
+                resultPrice = "Price level: $"
             } else if (resultPrice == "2") {
-                resultPrice = "$$"
+                resultPrice = "Price level: $$"
             } else if (resultPrice == "3") {
-                resultPrice = "$$$"
+                resultPrice = "Price level: $$$"
             } else if (resultPrice == "4") {
-                resultPrice = "$$$$"
+                resultPrice = "Price level: $$$$"
             }
             
             // Location rating

@@ -17,19 +17,36 @@ class LocationsViewController: UITableViewController {
     // Data from home page
     var toPass:[Location]!
     var stationCoordinates: [Double]!
+    var stationName: String!
 
     // List of retrieved restaurants (initially empty)
     var locations:[Location] = ViewController().locationsList
+    
+    // Name of restaurant selected
+    var locationName: String!
     
     // Label tag values
     let NAME_TAG = 100
     let PRICE_TAG = 101
     let RATING_TAG = 102
     
+    // Red color values
+    let RED_VALUE: CGFloat = 1
+    let GREEN_VALUE: CGFloat = 73/255
+    let BLUE_VALUE: CGFloat = 80/255
+    
+    // Row height
+    let ROW_HEIGHT: CGFloat = 100
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Set color of bottom bar
-        self.navigationController!.toolbar.barTintColor = UIColor.redColor()
+        let barColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
+        self.navigationController!.toolbar.barTintColor = barColor
+        
+        // Set height of each cell
+        self.tableView.rowHeight = ROW_HEIGHT;
         
         // Retrieve data from home page
         locations = toPass
@@ -55,16 +72,21 @@ class LocationsViewController: UITableViewController {
         // Currently showing all possible location results
         return locations.count
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "               Sorted by distance (Ascending)"
+    }
 
     // Show location information on corresponding cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
-
+        
         let location = locations[indexPath.row] as Location
         
         // Show location name
         if let nameLabel = cell.viewWithTag(NAME_TAG) as? UILabel {
             nameLabel.text = location.name
+            locationName = location.name
         }
         
         // Show location price level
@@ -126,7 +148,6 @@ class LocationsViewController: UITableViewController {
         return true
     }
     */
-
     
     // MARK: - Navigation
 
@@ -137,11 +158,16 @@ class LocationsViewController: UITableViewController {
            
             // Get the selected row
             let indexPath = self.tableView.indexPathForSelectedRow!
-            let clickedLocation =  locations[indexPath.row]
+            let clickedLocation = locations[indexPath.row]
+            
+            // Update location selected
+            locationName = clickedLocation.name
             
             // Pass station and location data from selected row
             nextPage.locationCoordinates = clickedLocation.coordinates
             nextPage.stationCoordinates = stationCoordinates
+            nextPage.stationName = stationName
+            nextPage.locationName = locationName
         }
         if(segue.identifier == "ShowReview"){
             let reviewPage = segue.destinationViewController as! ReviewTableViewController
@@ -153,6 +179,4 @@ class LocationsViewController: UITableViewController {
             reviewPage.placeID = clickedLocation.placeID
         }
     }
-
-
 }

@@ -21,8 +21,8 @@ class Location {
 
     
     init(name: String, price: String, rating: String, location: [Double], placeID: String) {
-        self.name   = name
-        self.price  = price
+        self.name = name
+        self.price = price
         self.rating = rating
         self.coordinates = location
         self.placeID = placeID

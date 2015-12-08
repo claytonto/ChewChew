@@ -10,11 +10,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name.png" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-JR-rRc">
-                    <rect key="frame" x="62" y="170" width="251" height="32"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="name.png" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-JR-rRc">
+                    <rect key="frame" x="86" y="170" width="202" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="251" id="96T-5k-olD"/>
+                        <constraint firstAttribute="height" constant="32" id="eeX-Kq-mj0"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.90196078431372551" green="0.32156862745098036" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="N5W-JR-rRc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="KBs-m5-dJH"/>
+                <constraint firstAttribute="trailing" secondItem="N5W-JR-rRc" secondAttribute="trailing" constant="25" id="RSG-IN-NKf"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="547.5" y="454.5"/>

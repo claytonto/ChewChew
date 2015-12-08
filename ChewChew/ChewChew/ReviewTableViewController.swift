@@ -14,6 +14,22 @@ class ReviewTableViewController: UITableViewController {
     // Data from home page
     var placeID:String   = ""
     var reviews:[Review] = []
+        
+    // Label tag values
+    let NAME_TAG = 100
+    let REVIEW_TAG = 101
+    let RATING_TAG = 102
+    
+    // Red color
+    let RED_VALUE: CGFloat = 1
+    let GREEN_VALUE: CGFloat = 73/255
+    let BLUE_VALUE: CGFloat = 80/255
+    
+    // Row height
+    let ROW_HEIGHT: CGFloat = 160
+    
+    // Font size
+    let REVIEW_FONT_SIZE: CGFloat = 14
     
     // getReview function
     func getReviews(placeID: String) -> [Review]{
@@ -45,8 +61,16 @@ class ReviewTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Set color of bottom bar
-        self.navigationController!.toolbar.barTintColor = UIColor.redColor()
+        let redColor = UIColor(red: RED_VALUE, green: GREEN_VALUE, blue: BLUE_VALUE, alpha: 1)
+        self.navigationController!.toolbar.barTintColor = redColor
+        
+        // Set color of back button
+        self.navigationController?.navigationBar.tintColor = redColor
+        
+        // Set height
+        self.tableView.rowHeight = ROW_HEIGHT
         
         // Retrieve data from home page
         reviews = getReviews(placeID)
@@ -77,21 +101,26 @@ class ReviewTableViewController: UITableViewController {
     // Show review information on corresponding cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReviewBox", forIndexPath: indexPath)
+        
+        cell.shouldIndentWhileEditing = false;
 
         let review = reviews[indexPath.row] as Review
 
         // Show location name
-        if let authorName = cell.viewWithTag(100) as? UILabel {
+        if let authorName = cell.viewWithTag(NAME_TAG) as? UILabel {
             authorName.text = review.author_name
         }
-        
+
         // Show content of a review
-        if let comment = cell.viewWithTag(101) as? UILabel {
+        if let comment = cell.viewWithTag(REVIEW_TAG) as? UITextView {
             comment.text = review.review
+            
+            // Increase font size
+            comment.font = UIFont(name: "HelveticaNeue-Light", size: REVIEW_FONT_SIZE)
         }
         
         // Show ratings as a row of stars
-        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
+        if let ratingImageView = cell.viewWithTag(RATING_TAG) as? UIImageView {
             let exactRating = Double(review.rating)   // string to double
             let rating: Int = Int(round(exactRating!))  // double to integer
             
